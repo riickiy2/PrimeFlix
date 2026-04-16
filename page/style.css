@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: aquamarine;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
+
+.header-img{
+  width: 160px;
+  height: auto
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+.butao{
+  padding: 10px 15px;
+}
