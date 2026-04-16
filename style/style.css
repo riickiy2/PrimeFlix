@@ -58,7 +58,7 @@ header {
 
 main {
   flex: 1; /* faz o conteúdo crescer */
-  margin-top: 80px; /* COMPENSA o header */
+  margin-top: 50px; /* COMPENSA o header */
   display: flex;
   justify-content: center;
   align-items: center;
