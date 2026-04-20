@@ -3,39 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>riickiy page</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <title>Login</title>
   </head>
   <body>
-  <header>
-    <a href="#">
-      <img class="header-img" src="img/header-img.png" alt="imagem-logo" />
-    </a>
-
-    <nav>
-      <ul class="header-content">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Content</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <a href="login.htm"><button class="butao">Login</button></a>
     
-  </header>
 
-  <main>
-    <img class="friren-img" src="img/Pongo muy bien Cara Vista_.gif" alt="">
-    <p>Estamos programando para você ter uma melhor experiencia, aguarde...</p>
-  </main>
+    <!doctype html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
 
-  <footer>
-    <div class="footer-content">
-      <p>Todos os direitos reservados para...</p>
-      <ul class="footer-links">
-        <li><a href="#">Integrantes</a></li>
-        <li><a href="#">Mais informações</a></li>
-      </ul>
-    </div>
-  </footer>
-</body>
+        <div class="container">
+          <!-- LOGIN -->
+          <div id="login">
+            <h2>Login</h2>
+            <input type="text" id="loginUser" placeholder="Usuário" />
+            <input type="password" id="loginPass" placeholder="Senha" />
+            <button onclick="fazerLogin()">Entrar</button>
+            <p>
+              Não tem conta?
+              <span onclick="mostrarCadastro()">Criar conta</span>
+            </p>
+          </div>
+
+          <!-- CADASTRO -->
+          <div id="cadastro" style="display: none">
+            <h2>Cadastro</h2>
+            <input type="text" id="cadUser" placeholder="Usuário" />
+
+            <input type="password" id="cadPass" placeholder="Senha" />
+
+            <button onclick="cadastrar()">Cadastrar</button>
+            <p>
+              Já tem conta? <span onclick="mostrarLogin()">Fazer login</span>
+            </p>
+          </div>
+        </div>
+
+        <script src="javascript/script.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -13,7 +13,7 @@ function cadastrar() {
   let user = document.getElementById("cadUser").value;
   let pass = document.getElementById("cadPass").value;
 
-  if(user === "" || pass === ""){
+  if (user === "" || pass === "") {
     alert("Preencha todos os campos!");
     return;
   }
@@ -25,8 +25,7 @@ function cadastrar() {
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
   alert("Cadastro realizado!");
-  window.location = "index.html";
-
+  window.location = "home.html";
 }
 
 // LOGIN
@@ -36,11 +35,21 @@ function fazerLogin() {
 
   let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-  let encontrado = usuarios.find(u => u.usuario === user && u.senha === pass);
+  let encontrado = usuarios.find((u) => u.usuario === user && u.senha === pass);
 
-  if(encontrado){
-    window.location = "index.html";
+  if (encontrado) {
+    // SALVA QUE O USUÁRIO ESTÁ LOGADO
+    localStorage.setItem("usuarioLogado", user);
+
+    window.location = "home.html";
   } else {
     alert("Usuário ou senha incorretos!");
   }
 }
+
+function logout() {
+  localStorage.removeItem("usuarioLogado");
+  window.location = "index.html";
+}
+
+

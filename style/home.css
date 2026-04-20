@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: aquamarine;
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -52,22 +52,27 @@ header {
   cursor: pointer;
   
 }
-/*=====================================================*/
 
 /*=========================MAIN=========================*/
 
 main {
   flex: 1; /* faz o conteúdo crescer */
-  margin-top: 50px; /* COMPENSA o header */
+  margin-top: 20px; /* COMPENSA o header */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* IMAGEM */
-.friren-img {
-  width: 400px;
-  height: 400px;
+.main-img {
+  width: 400px;   /* Altura */
+  height: 300px;  /* Largura */
+}
+
+.main-container{
+  margin-top: 30px;
+  width: 200px;
 }
 /*=======================================================*/
 
@@ -102,3 +107,4 @@ footer {
   
 }
 /*============================================================*/
+
