@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sen:wght@400..800&display=swap");
 
-
 /* RESET */
 * {
   margin: 0;
@@ -40,18 +39,16 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
-  
 }
 
-.header-content a{
+.header-content a {
   text-decoration: none;
 }
-.butao{
+.butao {
   padding: 8px 15px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  
 }
 
 /*=========================MAIN=========================*/
@@ -65,9 +62,6 @@ main {
   flex-direction: column;
 }
 
-
-
-
 /*=======================================================*/
 
 /*==========================FOOTER==========================*/
@@ -77,14 +71,12 @@ footer {
   padding: 20px 0;
   text-align: center;
   width: 100%;
-  
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .footer-links {
@@ -98,7 +90,6 @@ footer {
 .footer-links a {
   color: #3874b9; /* Cor dos links */
   text-decoration: none;
-  
 }
 /*============================================================*/
 
