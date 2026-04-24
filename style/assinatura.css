@@ -26,14 +26,15 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: transparent;
+  background-color: black;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .header-img {
-  width: 120px;
+  width: 150px;
 }
 
 .header-content {
@@ -45,14 +46,27 @@ header {
 
 .header-content a{
   text-decoration: none;
+  color: white;
+  font-size: large;
+  transition: 0.3s ease;
+  margin-left: 10px;
+  border-bottom: 3px solid transparent;
 }
-.butao{
+
+.header-content a:hover,
+.header-content a.active {
+  color: #ee471d; /* Amarelo Dourado */
+}
+
+.butao {
   padding: 8px 15px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  
+  font-size: large;
+  background-color: rgb(224, 54, 54);
 }
+
 
 /*=========================MAIN=========================*/
 

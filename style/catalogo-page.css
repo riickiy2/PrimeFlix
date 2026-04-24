@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: column; /* AGORA É COLUNA */
   min-height: 150vh; /* ocupa a tela toda */
-  background-color: #333;
+  background-color: #8a8888;
 }
 
 /* ====================HEADER==================== */
