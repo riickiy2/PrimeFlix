@@ -54,7 +54,6 @@ header {
 .header-content a:hover,
 .header-content a.active {
   color: #ee471d; /* Amarelo Dourado */
-  text-decoration: underline;
   
 }
 
