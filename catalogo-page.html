@@ -9,7 +9,11 @@
   <body>
     <header>
       <a href="#">
-        <img class="header-img" src="img/img-page/header-img.png" alt="imagem-logo" />
+        <img
+          class="header-img"
+          src="img/img-page/header-img.png"
+          alt="imagem-logo"
+        />
       </a>
 
       <nav>
@@ -24,9 +28,24 @@
     </header>
 
     <main>
-      <h1>Isso aqui é sua pagina de Catalogo de Filmes</h1>
-      <img src="img/img-page/¿Qué o quién es_ ¿Qué hace_.gif" alt="">
-      
+      <div class="carousel-container">
+        <h2>Em alta</h2>
+
+        <div class="carousel">
+          <button class="btn prev">&#10094;</button>
+
+          <div class="carousel-track" id="track">
+            <div class="card"><img src="img/film-img/CasteloAnimado.jpg" /></div>
+            <div class="card"><img src="img/film-img/PorcoRosso.jpg" /></div>
+            <div class="card"><img src="img/film-img/spider-man-into-the-spider.jpg" /></div>
+            <div class="card"><img src="img/film-img/black-panther.jpg" /></div>
+            <div class="card"><img src="img/film-img/i-want-to-eat-your-pancreas.jpg" /></div>
+            <div class="card"><img src="img/film-img/me-before-you.jpg" /></div>
+          </div>
+
+          <button class="btn next">&#10095;</button>
+        </div>
+      </div>
     </main>
 
     <footer>

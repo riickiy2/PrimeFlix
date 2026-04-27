@@ -15,7 +15,7 @@
 body {
   display: flex;
   flex-direction: column; /* AGORA É COLUNA */
-  min-height: 150vh; /* ocupa a tela toda */
+  min-height: 130vh; /* ocupa a tela toda */
   background-color: #8a8888;
 }
 
@@ -56,7 +56,6 @@ header {
   color: #ee471d; /* Amarelo Dourado */
 }
 
-
 .butao {
   padding: 8px 15px;
   border-radius: 8px;
@@ -76,8 +75,6 @@ main {
   align-items: center;
   flex-direction: column;
 }
-
-/*=======================================================*/
 
 /*==========================FOOTER==========================*/
 footer {
@@ -106,5 +103,67 @@ footer {
   color: #3874b9; /* Cor dos links */
   text-decoration: none;
 }
-/*============================================================*/
 
+/*======================CAROUSEL========================*/
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.carousel-container {
+  width: 90%;
+  margin: auto;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 200px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* 🔥 ZOOM NO HOVER */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* BOTÕES */
+.btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}

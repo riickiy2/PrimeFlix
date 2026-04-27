@@ -52,3 +52,34 @@ function logout() {
   window.location = "index.html";
 }
 
+/* CARROSSEL */
+const track = document.getElementById("track");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+let index = 0;
+const cardWidth = 220; // largura + margem
+const totalCards = document.querySelectorAll(".card").length;
+const visibleCards = 4; // quantos aparecem na tela
+
+nextBtn.addEventListener("click", () => {
+  index++;
+
+  if (index > totalCards - visibleCards) {
+    // 🔁 VOLTA PRO INÍCIO
+    index = 0;
+  }
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+});
+
+prevBtn.addEventListener("click", () => {
+  index--;
+
+  if (index < 0) {
+    // 🔁 VAI PRO FINAL
+    index = totalCards - visibleCards;
+  }
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+});
