@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sen:wght@400..800&display=swap");
 
-
 /* RESET */
 * {
   margin: 0;
@@ -17,7 +16,8 @@ body {
   display: flex;
   flex-direction: column; /* AGORA É COLUNA */
   min-height: 150vh; /* ocupa a tela toda */
-  background-color: #8a8888;
+  background-color: #000000;
+  color: white;
 }
 
 /* ====================HEADER==================== */
@@ -26,11 +26,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: black;
+  background-color: rgba(3, 3, 3, 0.5); /*Cor preta com 50% de opacidade*/
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 .header-img {
@@ -41,10 +42,9 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
-  
 }
 
-.header-content a{
+.header-content a {
   text-decoration: none;
   color: white;
   font-size: large;
@@ -67,7 +67,6 @@ header {
   background-color: rgb(224, 54, 54);
 }
 
-
 /*=========================MAIN=========================*/
 
 main {
@@ -79,10 +78,26 @@ main {
   flex-direction: column;
 }
 
+.plan-container {
+  width: auto;
+  margin: auto;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+}
 
+.planos {
+ justify-content: center;
+  display: flex;
+  align-items: center;
+}
 
-
-/*=======================================================*/
+.assinatura {
+  background-color: #3874b9;
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
 /*==========================FOOTER==========================*/
 footer {
@@ -91,14 +106,12 @@ footer {
   padding: 20px 0;
   text-align: center;
   width: 100%;
-  
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .footer-links {
@@ -112,5 +125,4 @@ footer {
 .footer-links a {
   color: #3874b9; /* Cor dos links */
   text-decoration: none;
-  
 }

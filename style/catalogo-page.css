@@ -25,11 +25,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: black;
+  background-color: rgba(3, 3, 3, 0.5); /*Cor preta com 50% de opacidade*/
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
 .header-img {
@@ -109,7 +110,6 @@ footer {
 body {
   background: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
 }
 
 .carousel-container {
