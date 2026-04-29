@@ -52,7 +52,6 @@ function logout() {
   window.location = "index.html";
 }
 
-
 /* CARROSSEL */
 const track = document.getElementById("track");
 const nextBtn = document.querySelector(".next");
@@ -84,3 +83,4 @@ prevBtn.addEventListener("click", () => {
 
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 });
+

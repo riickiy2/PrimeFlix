@@ -55,7 +55,7 @@ header {
 
 .header-content a:hover,
 .header-content a.active {
-  color: #ee471d; /* Amarelo Dourado */
+  color: #ee471d;
 }
 
 .butao {
@@ -70,33 +70,98 @@ header {
 /*=========================MAIN=========================*/
 
 main {
-  flex: 1; /* faz o conteúdo crescer */
-  margin-top: 20px; /* COMPENSA o header */
+  min-height: 140vh;
+  margin-top: 80px; /* COMPENSA o header */
+  display: flex;
+  justify-content: center; 
+}
+
+
+.plans-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.differential {
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* TOGGLE */
+.toggle {
+  display: inline-flex;
+  background: #222;
+  border-radius: 30px;
+  padding: 5px;
+  margin-bottom: 40px;
+}
+
+.toggle button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* PLANOS */
+.plans {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 20px;
 }
 
-.plan-container {
-  width: auto;
-  margin: auto;
-  background-color: #333;
-  justify-content: center;
-  align-items: center;
+.card {
+  background: #f1f1f1;
+  color: #000;
+  width: 300px;
+  padding: 25px;             /* Card dos planos */
+  border-radius: 8px;
+  text-align: left;
+  transition: 0.3s;
 }
 
-.planos {
- justify-content: center;
-  display: flex;
-  align-items: center;
+.card:hover {
+  transform: translateY(-5px); /* Efeito de zoom */
 }
 
-.assinatura {
-  background-color: #3874b9;
-  width: 200px;
-  margin: 10px;
-  border-radius: 10px;
+.card h2 {
+  margin-bottom: 15px;  /* Distancia para baixo */
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.card li {
+  margin-bottom: 10px;
+}
+
+/* PREÇO */
+.price {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.price span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOTÃO */
+.card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #5c6f82;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /*==========================FOOTER==========================*/
