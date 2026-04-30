@@ -12,6 +12,17 @@ function mostrarLogin() {
 function cadastrar() {
   let user = document.getElementById("cadUser").value;
   let pass = document.getElementById("cadPass").value;
+  let nome = document.getElementById("nome").value;
+  let nomeMae = document.getElementById("nomeMae").value;
+  let cpf = document.getElementById("cpf").value;
+  let senha = document.getElementById("senha").value;
+  let confirmarSenha = document.getElementById("confirmarSenha").value;
+
+  document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
+
+  let erro = false;
+
+  
 
   if (user === "" || pass === "") {
     alert("Preencha todos os campos!");
@@ -47,12 +58,13 @@ function fazerLogin() {
   }
 }
 
+// Logout
 function logout() {
   localStorage.removeItem("usuarioLogado");
   window.location = "index.html";
 }
 
-/* CARROSSEL */
+// CARROSSEL
 const track = document.getElementById("track");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
@@ -83,4 +95,3 @@ prevBtn.addEventListener("click", () => {
 
   track.style.transform = `translateX(-${index * cardWidth}px)`;
 });
-

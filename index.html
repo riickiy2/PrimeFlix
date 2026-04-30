@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/login.css" />
-    <title>Login</title>
+    <title>Entre</title>
   </head>
   <body>
-    
-
     <!doctype html>
     <html lang="pt-br">
       <head>
@@ -17,7 +15,6 @@
         <link rel="stylesheet" href="style.css" />
       </head>
       <body>
-
         <div class="container">
           <!-- LOGIN -->
           <div id="login">
@@ -34,9 +31,51 @@
           <!-- CADASTRO -->
           <div id="cadastro" style="display: none">
             <h2>Cadastro</h2>
-            <input type="text" id="cadUser" placeholder="Usuário" />
 
-            <input type="password" id="cadPass" placeholder="Senha" />
+            <label>Nome de usuário</label>
+             <input type="text" id="cadUser"/>
+
+            <label>Nome completo</label>
+            <input type="text" id="nome" />
+            <span class="erro" id="erroNome"></span>
+
+            <label>Nome da mãe</label>
+            <input type="text" id="nomeMae" />
+            <span class="erro" id="erroNomeMae"></span>
+
+            <label>Data de nascimento</label>
+            <input type="date" id="dataNascimento" />
+
+            <label>Sexo</label>
+            <select id="sexo">
+              <option value="">Selecione</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+            </select>
+
+            <label>CPF</label>
+            <input type="text" id="cpf" placeholder="012.345.678-90" />
+            <span class="erro" id="erroCpf"></span>
+
+            <label>Telefone celular</label>
+            <input type="tel" id="celular" />
+
+            <label>Telefone fixo</label>
+            <input type="tel" id="fixo" />
+
+            <label>Endereço</label>
+            <input type="text" id="endereco" />
+
+            <label>Login</label>
+            <input type="text" id="login" />
+
+            <label>Senha</label>
+            <input type="password" id="cadPass"/>
+            <span class="erro" id="erroSenha"></span>
+
+            <label>Confirmar senha</label>
+            <input type="password" id="confirmarSenha" />
+            <span class="erro" id="erroConfirmar"></span>
 
             <button onclick="cadastrar()">Cadastrar</button>
             <p>
