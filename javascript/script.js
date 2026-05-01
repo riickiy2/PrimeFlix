@@ -8,38 +8,82 @@ function mostrarLogin() {
   document.getElementById("cadastro").style.display = "none";
 }
 
-// CADASTRAR
+// ~~~~~~~~~~~~~~CADASTRAR~~~~~~~~~~~~~~
 function cadastrar() {
   let user = document.getElementById("cadUser").value;
   let pass = document.getElementById("cadPass").value;
   let nome = document.getElementById("nome").value;
   let nomeMae = document.getElementById("nomeMae").value;
   let cpf = document.getElementById("cpf").value;
-  let senha = document.getElementById("senha").value;
   let confirmarSenha = document.getElementById("confirmarSenha").value;
 
-  document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
+   document.querySelectorAll(".erro").forEach(el => el.textContent = "");
 
   let erro = false;
 
+  //NOME
+  if (nome.length < 15 && nome.length > 60) {
+    document.getElementById("erroNome").textContent =
+      "Nome deve ter entre 15 a 60 caracteres";
+    erro = true;
+  }
+
+  //NOME MÃE
+  if (nomeMae.length < 15 && nomeMae.length > 60) {
+    document.getElementById("erroNomeMae").textContent =
+      "Nome deve ter entre 15 a 60 caracteres";
+    erro = true;
+  }
+
+  //CPF
+  if (cpf.length < 11) {
+    document.getElementById("erroCpf").textContent = "CPF invalido";
+    erro = true;
+  }
+
   
 
-  if (user === "" || pass === "") {
+  //SENHA
+  if (cadPass.length < 8) {
+    document.getElementById("erroSenha").textContent =
+      "Senha deve conter no minimo 8 caracteres";
+    erro = true;
+  }
+
+  //CONFIRMAR SENHA
+  if (cadPass !== confirmarSenha) {
+    document.getElementById("erroConfirmar").textContent =
+      "As senhas não coincidem";
+    erro = true;
+  }
+
+  //SE HOUVER CAMPOS VAZIOS
+  if (
+    user === "" ||
+    pass === "" ||
+    nome === "" ||
+    nomeMae === "" ||
+    cpf === "" ||
+    confirmarSenha === ""
+  ) {
     alert("Preencha todos os campos!");
     return;
   }
 
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  //SE NÃO HOUVER ERRO
+  if (!erro) {
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-  usuarios.push({ usuario: user, senha: pass });
+    usuarios.push({ usuario: user, senha: pass });
 
-  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-  alert("Cadastro realizado!");
-  window.location = "home.html";
+    alert("Cadastro realizado!");
+    window.location = "home.html";
+  }
 }
 
-// LOGIN
+// ~~~~~~~~~~~~~~LOGIN~~~~~~~~~~~~~~
 function fazerLogin() {
   let user = document.getElementById("loginUser").value;
   let pass = document.getElementById("loginPass").value;
@@ -58,13 +102,13 @@ function fazerLogin() {
   }
 }
 
-// Logout
+// ~~~~~~~~~~~~~~LOGOUT~~~~~~~~~~~~~~
 function logout() {
   localStorage.removeItem("usuarioLogado");
   window.location = "index.html";
 }
 
-// CARROSSEL
+// ~~~~~~~~~~~~~~CARROSSEL~~~~~~~~~~~~~~
 const track = document.getElementById("track");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
@@ -78,7 +122,7 @@ nextBtn.addEventListener("click", () => {
   index++;
 
   if (index > totalCards - visibleCards) {
-    // 🔁 VOLTA PRO INÍCIO
+    // VOLTA PRO INÍCIO
     index = 0;
   }
 
@@ -89,7 +133,7 @@ prevBtn.addEventListener("click", () => {
   index--;
 
   if (index < 0) {
-    // 🔁 VAI PRO FINAL
+    // VAI PRO FINAL
     index = totalCards - visibleCards;
   }
 

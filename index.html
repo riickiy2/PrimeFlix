@@ -32,9 +32,6 @@
           <div id="cadastro" style="display: none">
             <h2>Cadastro</h2>
 
-            <label>Nome de usuário</label>
-             <input type="text" id="cadUser"/>
-
             <label>Nome completo</label>
             <input type="text" id="nome" />
             <span class="erro" id="erroNome"></span>
@@ -51,23 +48,23 @@
               <option value="">Selecione</option>
               <option>Masculino</option>
               <option>Feminino</option>
-            </select>
+            </select> <br>
 
             <label>CPF</label>
-            <input type="text" id="cpf" placeholder="012.345.678-90" />
+            <input type="text" id="cpf" placeholder="123.456.789-00" maxlength="14"/>
             <span class="erro" id="erroCpf"></span>
 
             <label>Telefone celular</label>
-            <input type="tel" id="celular" />
+            <input type="tel" id="celular" placeholder="(XX) XXXXX-XXXX" />
 
             <label>Telefone fixo</label>
-            <input type="tel" id="fixo" />
+            <input type="tel" id="fixo" placeholder="(XX) XXXXX-XXXX" />
 
-            <label>Endereço</label>
+            <label>Endereço</label>  <!-- ATENÇÃO -->
             <input type="text" id="endereco" />
 
-            <label>Login</label>
-            <input type="text" id="login" />
+            <label>Nome de usuário</label>
+            <input type="text" id="cadUser"/>
 
             <label>Senha</label>
             <input type="password" id="cadPass"/>
