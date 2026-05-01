@@ -17,7 +17,7 @@ function cadastrar() {
   let cpf = document.getElementById("cpf").value;
   let confirmarSenha = document.getElementById("confirmarSenha").value;
 
-   document.querySelectorAll(".erro").forEach(el => el.textContent = "");
+  document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
 
   let erro = false;
 
@@ -40,8 +40,6 @@ function cadastrar() {
     document.getElementById("erroCpf").textContent = "CPF invalido";
     erro = true;
   }
-
-  
 
   //SENHA
   if (cadPass.length < 8) {
@@ -102,7 +100,27 @@ function fazerLogin() {
   }
 }
 
+// ~~~~~~~~~~~~~~MASCARA CPF~~~~~~~~~~~~~~
+function mascaraCPF(input) {
+  let valor = input.value;
+  // Remove tudo que n é digito
+  valor = valor.replace(/\D/g, "");
+  //Adiciona os caracteres de formatação
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+  input.value = valor;
+}
+
+// ~~~~~~~~~~~~~~MASCARA TELEFONE~~~~~~~~~~~~~~
+function mascaraTel(input) {
+  let value = input.value.replace(/\D/g, ""); // Remove não numéricos [4]
+  value = value.replace(/^(\d{2})(\d)/g, "($1) $2"); // Coloca parênteses no DDD [8]
+  value = value.replace(/(\d)(\d{4})$/, "$1-$2"); // Coloca hífen [4]
+  input.value = value;
+}
 // ~~~~~~~~~~~~~~LOGOUT~~~~~~~~~~~~~~
+
 function logout() {
   localStorage.removeItem("usuarioLogado");
   window.location = "index.html";
