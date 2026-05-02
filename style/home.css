@@ -176,17 +176,3 @@ footer {
   }
 }
 
-/* Celulares pequenos (até 480px)*/
-@media (max-width: 480px){
-  .header-content{
-    gap: 6px;
-  }
-
-  .header-content a{
-    font-size: small;
-  }
-
-  .home-content h1 {
-    font-size: clamp(1.8rem, 10vw, 3rem);
-  }
-}
