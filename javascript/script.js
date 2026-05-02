@@ -119,6 +119,14 @@ function mascaraTel(input) {
   input.value = value;
 }
 
+// ~~~~~~~~~~~~~~MASCARA CEP~~~~~~~~~~~~~~
+function mascaraCep(input) {
+  let v = input.value.replace(/\D/g, "");
+  // Formata o CEP como 00000-000 enquanto o usuário digita
+  if (v.length > 5) v = v.slice(0, 5) + "-" + v.slice(5, 8);
+  input.value = v;
+}
+
 // ~~~~~~~~~~~~~~DEIXA O INPUT VERMELHO QUANDO ERRA~~~~~~~~~~~~~~
 function marcarErro(id, mensagem) {
   document.getElementById(id).classList.add("input-erro");
@@ -139,7 +147,7 @@ const track = document.getElementById("track");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
-if (track && nextBtn && prevBtn){
+if (track && nextBtn && prevBtn) {
   let index = 0;
   const totalCards = document.querySelectorAll(".card").length;
 
@@ -164,11 +172,11 @@ if (track && nextBtn && prevBtn){
     return Math.max(1, Math.floor(containerWidth / cardWidth));
   }
 
-  nextBtn.addEventListener("click", () =>{
+  nextBtn.addEventListener("click", () => {
     const visibleCards = getVisibleCards();
     index++;
-    if (index > totalCards - visibleCards){
-      index = 0
+    if (index > totalCards - visibleCards) {
+      index = 0;
     }
     track.style.transform = `translateX(-${index * getCardWidth()}px)`;
   });
@@ -176,7 +184,7 @@ if (track && nextBtn && prevBtn){
   prevBtn.addEventListener("click", () => {
     const visibleCards = getVisibleCards();
     index--;
-    if (index < 0){
+    if (index < 0) {
       index = Math.max(0, totalCards - visibleCards);
     }
     track.style.transform = `translateX(-${index * getCardWidth()}px)`;
@@ -187,3 +195,33 @@ if (track && nextBtn && prevBtn){
     track.style.transform = "translatex(0)";
   });
 }
+
+/* VALIDA O CEP */
+
+const btn = document.getElementById("btnBuscar");
+const inputCep = document.getElementById("cep");
+
+btn.addEventListener("click", async () => {
+  const cep = inputCep.value.replace(/\D/g, "");
+  if (cep.length !== 8) {
+    alert("CEP inválido!");
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const data = await res.json();
+
+    if (data.erro) {
+      alert("CEP não encontrado!");
+    } else {
+      document.getElementById("rua").value = data.logradouro;
+      document.getElementById("bairro").value = data.bairro;
+      document.getElementById("cidade").value = data.localidade;
+      document.getElementById("uf").value = data.uf;
+      document.getElementById("numero").focus();
+    }
+  } catch (e) {
+    alert("Erro ao buscar.");
+  }
+});
