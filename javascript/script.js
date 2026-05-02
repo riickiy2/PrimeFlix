@@ -18,6 +18,7 @@ function cadastrar() {
   let confirmarSenha = document.getElementById("confirmarSenha").value;
 
   document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
+  document.querySelectorAll(".input-erro").forEach((el) => el.classList.remove("input-erro")); // ← adicione
 
   let erro = false;
 
@@ -36,35 +37,31 @@ function cadastrar() {
 
   //NOME
   if (nome.length < 15 || nome.length > 60) {
-    document.getElementById("erroNome").textContent =
-      "Nome deve ter entre 15 a 60 caracteres";
+    marcarErro("nome", "Nome deve ter entre 15 a 60 caracteres");
     erro = true;
   }
 
   //NOME MÃE
   if (nomeMae.length < 15 || nomeMae.length > 60) {
-    document.getElementById("erroNomeMae").textContent =
-      "Nome deve ter entre 15 a 60 caracteres";
+    marcarErro("nomeMae", "Nome deve ter entre 15 a 60 caracteres");
     erro = true;
   }
 
   //CPF
   if (cpf.length < 14) {
-    document.getElementById("erroCpf").textContent = "CPF invalido";
+    marcarErro("cpf", "CPF inválido");
     erro = true;
   }
 
   //SENHA
   if (pass.length < 8) {
-    document.getElementById("erroSenha").textContent =
-      "Senha deve conter no minimo 8 caracteres";
+    marcarErro("cadPass", "Senha deve conter no mínimo 8 caracteres");
     erro = true;
   }
 
   //CONFIRMAR SENHA
   if (pass !== confirmarSenha) {
-    document.getElementById("erroConfirmar").textContent =
-      "As senhas não coincidem";
+    marcarErro("confirmarSenha", "As senhas não coincidem");
     erro = true;
   }
 
@@ -119,6 +116,15 @@ function mascaraTel(input) {
   value = value.replace(/(\d)(\d{4})$/, "$1-$2"); // Coloca hífen [4]
   input.value = value;
 }
+
+// ~~~~~~~~~~~~~~DEIXA O INPUT VERMELHO QUANDO ERRA~~~~~~~~~~~~~~
+function marcarErro(id, mensagem) {
+  document.getElementById(id).classList.add("input-erro");
+  document.getElementById(
+    "erro" + id.charAt(0).toUpperCase() + id.slice(1),
+  ).textContent = mensagem;
+}
+
 // ~~~~~~~~~~~~~~LOGOUT~~~~~~~~~~~~~~
 
 function logout() {

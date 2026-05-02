@@ -30,6 +30,11 @@ input {
   padding: 10px;
 }
 
+input.input-erro, select.input-erro{
+  border: 2px solid #d42710;
+  outline: none;
+}
+
 button {
   width: 100%;
   padding: 10px;
