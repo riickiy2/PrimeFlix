@@ -7,7 +7,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
 }
 
@@ -54,7 +53,7 @@ header {
 
 .header-content a:hover,
 .header-content a.active {
-  color: #ee471d; /* Amarelo Dourado */
+  color: #ee471d; 
   
 }
 
@@ -65,6 +64,7 @@ header {
   cursor: pointer;
   background-color: #ee471d;
   font-size: large;
+  white-space: nowrap; /* nowrap impede o texto do botão de quebrar linha */
 }
 
 /*=========================MAIN=========================*/
@@ -74,7 +74,7 @@ header {
   height: 100vh;
   width: 100%;
   padding: 0;
-  background-image: url("/img/img-page/background-black.png");
+  background-image: url("/img/img-page/img-fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -126,10 +126,67 @@ footer {
   padding: 0;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;/*  wrap permite que os links quebrem linha em vez de sumir da tela */ 
+  justify-content: center;
+  gap: 15px;
   margin-top: 10px;
 }
 
 .footer-links a {
   color: #3874b9; /* Cor dos links */
   text-decoration: none;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+/* Tablets e celulares grandes (até 768px)*/
+@media (max-width: 786px){
+  header{
+    flex-wrap: wrap; /* quebra a linha para baixo */
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .header-img{
+    width: 110px; /* reduz o tamanho da img */
+  }
+
+  .header-content{
+    gap: 10px;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-content a{
+    font-size: medium;
+    margin-left: 0; /* o botao onde antes se encontrava abaixo, agora está do lado dos botões de navegação */
+  }
+
+  .butao{
+    font-size: medium;
+    padding: 6px 12px;
+  }
+
+  .home-content h1{
+    font-size: clamp(2rem, 8vw, 5rem); /* clamp(mínimo, ideal, máximo) ajusta o tamanho da fonte automaticamente conforme a tela */
+  }
+
+  .home-p{
+    font-size: clamp(0.85rem, 3vw, 1rem);
+  }
+}
+
+/* Celulares pequenos (até 480px)*/
+@media (max-width: 480px){
+  .header-content{
+    gap: 6px;
+  }
+
+  .header-content a{
+    font-size: small;
+  }
+
+  .home-content h1{
+    font-size: clamp(1.8rem, 10vw, 3rem);
+  }
 }
