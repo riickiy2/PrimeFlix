@@ -3,8 +3,8 @@
 * {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
+  box-sizing: border-box;
 }
 
 body {
@@ -13,19 +13,20 @@ body {
   display: grid;
   place-items: center; /* centraliza horizontal e vertical */
   padding: 20px;
-  box-sizing: border-box;
-}
+} 
 
 .container {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  width: 350px;
+  width: 100%;
+  max-width: 400px;
 }
 
-input {
+input,
+select {
   display: block;
-  width: 90%;
+  width: 100%;  /*faz o input ocupar toda a largura do container pai */
   margin: 10px 0;
   padding: 10px;
 }
@@ -43,6 +44,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 8px;
+  font-size: 1rem;
 }
 
 span {
@@ -61,4 +63,22 @@ p span {
   cursor: default;
   font-size: 12px;
   display: block;
+}
+
+/* ============ RESPONSIVIDADE ============ */
+/* telas de celulares pequenos */
+@media (max-width: 360px){
+  .container{
+    padding: 15px;
+  }
+
+  input,
+  select{
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button{
+    font-size: 14px;
+  }
 }
