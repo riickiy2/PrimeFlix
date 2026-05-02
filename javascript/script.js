@@ -21,40 +21,6 @@ function cadastrar() {
 
   let erro = false;
 
-  //NOME
-  if (nome.length < 15 && nome.length > 60) {
-    document.getElementById("erroNome").textContent =
-      "Nome deve ter entre 15 a 60 caracteres";
-    erro = true;
-  }
-
-  //NOME MÃE
-  if (nomeMae.length < 15 && nomeMae.length > 60) {
-    document.getElementById("erroNomeMae").textContent =
-      "Nome deve ter entre 15 a 60 caracteres";
-    erro = true;
-  }
-
-  //CPF
-  if (cpf.length < 11) {
-    document.getElementById("erroCpf").textContent = "CPF invalido";
-    erro = true;
-  }
-
-  //SENHA
-  if (cadPass.length < 8) {
-    document.getElementById("erroSenha").textContent =
-      "Senha deve conter no minimo 8 caracteres";
-    erro = true;
-  }
-
-  //CONFIRMAR SENHA
-  if (cadPass !== confirmarSenha) {
-    document.getElementById("erroConfirmar").textContent =
-      "As senhas não coincidem";
-    erro = true;
-  }
-
   //SE HOUVER CAMPOS VAZIOS
   if (
     user === "" ||
@@ -66,6 +32,40 @@ function cadastrar() {
   ) {
     alert("Preencha todos os campos!");
     return;
+  }
+
+  //NOME
+  if (nome.length < 15 || nome.length > 60) {
+    document.getElementById("erroNome").textContent =
+      "Nome deve ter entre 15 a 60 caracteres";
+    erro = true;
+  }
+
+  //NOME MÃE
+  if (nomeMae.length < 15 || nomeMae.length > 60) {
+    document.getElementById("erroNomeMae").textContent =
+      "Nome deve ter entre 15 a 60 caracteres";
+    erro = true;
+  }
+
+  //CPF
+  if (cpf.length < 14) {
+    document.getElementById("erroCpf").textContent = "CPF invalido";
+    erro = true;
+  }
+
+  //SENHA
+  if (pass.length < 8) {
+    document.getElementById("erroSenha").textContent =
+      "Senha deve conter no minimo 8 caracteres";
+    erro = true;
+  }
+
+  //CONFIRMAR SENHA
+  if (pass !== confirmarSenha) {
+    document.getElementById("erroConfirmar").textContent =
+      "As senhas não coincidem";
+    erro = true;
   }
 
   //SE NÃO HOUVER ERRO
