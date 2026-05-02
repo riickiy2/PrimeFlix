@@ -118,7 +118,7 @@ footer {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: hidden; /* o hidden serve para esconder os cards que estão fora de visão */
 }
 
 .carousel-track {
@@ -140,7 +140,7 @@ footer {
   transition: transform 0.3s ease;
 }
 
-/* 🔥 ZOOM NO HOVER */
+/* ZOOM NO HOVER */
 .card:hover img {
   transform: scale(1.1);
 }
@@ -164,3 +164,43 @@ footer {
 .next {
   right: 0;
 }
+
+/* ============ RESPONSIVIDADE ============ */
+/* Tablets (até 768px) */
+@media (max-width: 768px){
+  header{
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .header-img{
+    width: 110px;
+  }
+
+  .header-content{
+    gap: 10px;
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-content a{
+    font-size: medium;
+    margin-left: 0;
+  }
+
+  .butao{
+    font-size: medium;
+    padding: 6px 12px;
+  }
+
+  .card{
+    min-width: 160px;
+  }
+
+  .card img{
+    height: 240px;
+  }
+}
+
