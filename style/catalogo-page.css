@@ -26,7 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: rgba(3, 3, 3, 0.5); /*Cor preta com 50% de opacidade*/
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -35,7 +35,7 @@ header {
 }
 
 .header-img {
-  width: 150px;
+  width: 130px;
 }
 
 .header-content {

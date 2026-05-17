@@ -24,7 +24,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  background-color: transparent; /*Cor preta com 50% de opacidade*/
+  background-color: transparent; 
   position: fixed;
   top: 0;
   width: 100%;
