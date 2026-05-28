@@ -111,28 +111,94 @@ header {
 
 /* abaixo da primeira parte do home */
 .home-page {
-  position: relative; /*IMAGEM PARA BAIXO DAS INFORMaÇÕES*/
   height: 100vh;
   width: 100%;
   padding: 0;
-  background: #000000;
+  background: #312929;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
 }
 
 .page-info {
-  width: 50vw;
-  height: 50vh;
   background-color: #ee471d;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: aliceblue;
-  width: 50%;
+  width: 900px;
+  height: 150px;
+  gap: 50px;
 }
+
+.ricardo{
+  background-color: beige;
+  width: 300px;
+  height: 120px;
+  color: black;
+}
+/*======================CAROUSEL========================*/
+
+.carousel-container {
+  width: 90%;
+  margin: auto;
+  color: white;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* o hidden serve para esconder os cards que estão fora de visão */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 200px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* ZOOM NO HOVER */
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* BOTÕES */
+.btn {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
 
 /*==========================FOOTER==========================*/
 footer {
