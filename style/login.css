@@ -7,7 +7,7 @@
   --text-muted:     #b0a0a0;
   --input-border: rgb(236, 236, 236);
   --input-color:    #ffffff;
-  --input-background: rgb(170, 143, 143);
+  --input-bg: rgb(170, 143, 143);
   --input-color: rgb(255, 255, 255);
   --input-focus: rgb(187, 71, 56);
   --step-inactive:  #7a6060;
@@ -62,7 +62,7 @@ h1 {
   color: var(--text-muted);
 }
 /* ═══════════ INDICADOR DE ETAPAS ═══════════ */
-.step-indicador{
+.steps-indicador{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +92,7 @@ h1 {
 }
 
 .step.active .step-dot{
-  background-color: var(--step-active);
+  background: var(--step-active);
   color: white;
   box-shadow: 0 0 0 4px rgba(212,39,16,0.25);
 }
@@ -113,6 +113,16 @@ h1 {
 
 .step.active span{
   color: var(--text-light);
+}
+
+.step-line{
+  flex: 1;
+  height: 2px;
+  background: var(--step-inactive);
+  margin: 0 8px;
+  margin-bottom: 22px;
+  max-width: 60px;
+  transition: background 0.3s;
 }
 
 .step-line.done{
@@ -216,24 +226,36 @@ select option{
   box-shadow: 0 0 0 3px rgba(255,68,68,0.2) !important;
 }
 
+/* ══════════════════════════════ */
 /* ═══════════ BOTÕES ═══════════ */
-
-.btn-enter{
+/* ══════════════════════════════ */
+/* Parei por aqui, continuar com base no outro arquivo */
+.btn-primary{
   width: 100%;
-  padding: 12px;
+  padding: 13px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
-  background-color: var(--btn-enter-background);
+  margin-top: 8px;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+  background: var(--btn-enter-background);
   color: var(--btn-enter-color);
 }
 
-.btn-enter:hover{
-  transform: scale(1.02);
+.btn-primary:hover{
+  background: var();
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(212,39,16,0.4);;
 }
 
+.btn-secondary{
+  padding: 12px 18px;
+  border: 2px solid var();
+  border-radius: 8px;
+}
 
 /*  reparar  */
 span {
