@@ -5,6 +5,7 @@
 function mostrarCadastro() {
   document.getElementById("login").style.display = "none";
   document.getElementById("cadastro").style.display = "block";
+  irParaEtapa(1); 
 }
 
 function mostrarLogin() {
@@ -19,7 +20,7 @@ function mostrarLogin() {
 function irParaEtapa(n){
   //aqui esconde as etapas
   [1, 2, 3].forEach(i => {
-    document.getElementById("etapa" + i).style.display = "nome";
+    document.getElementById("etapa" + i).style.display = "none";
   })
 
   //mostra a etapa desejada
@@ -92,9 +93,9 @@ function cadastrar() {
   limparErros();
   let erro = false;
 
-  let user = document.getElementById("cadUser").value.trim();
-  let pass = document.getElementById("cadPass").value;
-  let confirmarSenha = document.getElementById("confirmarSenha").value;
+  const user = document.getElementById("cadUser").value.trim();
+  const pass = document.getElementById("cadPass").value;
+  const confirmarSenha = document.getElementById("confirmarSenha").value;
 
   document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
   document
@@ -170,30 +171,16 @@ function mascaraCep(input) {
   input.value = v;
 }
 
-// ~~~~~~~~~~~~~~DEIXA O INPUT VERMELHO QUANDO ERRA~~~~~~~~~~~~~~
-function marcarErro(id, mensagem) {
-  document.getElementById(id).classList.add("input-erro");
-  document.getElementById(
-    "erro" + id.charAt(0).toUpperCase() + id.slice(1),
-  ).textContent = mensagem;
-}
+// ══════════════════════════════════════
+//  BUSCA DE CEP (ViaCEP)
+// ══════════════════════════════════════
 
-// ~~~~~~~~~~~~~~LOGOUT~~~~~~~~~~~~~~
-
-function logout() {
-  localStorage.removeItem("usuarioLogado");
-  window.location = "index.html";
-}
-
-// ~~~~~~~~~~~ Valida o CEP ~~~~~~~~~~~
-
-const btn = document.getElementById("btnBuscar");
-const inputCep = document.getElementById("cep");
-
-btn.addEventListener("click", async () => {
+async function buscarCep() {
+  const inputCep = document.getElementById("cep");
   const cep = inputCep.value.replace(/\D/g, "");
+
   if (cep.length !== 8) {
-    alert("CEP inválido!");
+    alert("CEP inválido! Digite 8 números.");
     return;
   }
 
@@ -204,13 +191,34 @@ btn.addEventListener("click", async () => {
     if (data.erro) {
       alert("CEP não encontrado!");
     } else {
-      document.getElementById("rua").value = data.logradouro;
+      document.getElementById("rua").value    = data.logradouro;
       document.getElementById("bairro").value = data.bairro;
       document.getElementById("cidade").value = data.localidade;
-      document.getElementById("uf").value = data.uf;
+      document.getElementById("uf").value     = data.uf;
       document.getElementById("numero").focus();
     }
   } catch (e) {
-    alert("Erro ao buscar.");
+    alert("Erro ao buscar o CEP. Verifique sua conexão.");
   }
-});
+}
+
+// ══════════════════════════════════════
+//  HELPERS DE ERRO
+// ══════════════════════════════════════
+
+function limparErros(){
+  document.querySelectorAll(".erro").forEach(el => (el.textContent = ""));
+  document.querySelectorAll(".input-erro").forEach(el => el.classList.remove = ("input-erro"));
+}
+
+function marcarErro(id, mensagem) {
+  const input = document.getElementById(id);
+  if (input) input.classList.add("input-erro");
+
+  const errokey = "erro" + id.charAt(0).toUpperCase() + id.slice(1);
+  const erroEl = document.getElementById(erroKey);
+  if (erroEl) erroEl.textContent = mensagem;
+}
+
+
+

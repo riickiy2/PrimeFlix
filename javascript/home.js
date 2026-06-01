@@ -51,3 +51,12 @@ if (track && nextBtn && prevBtn) {
     track.style.transform = "translatex(0)";
   });
 }
+
+// ══════════════════════════════════════
+//  LOGOUT
+// ══════════════════════════════════════
+
+function logout() {
+  localStorage.removeItem("usuarioLogado");
+  window.location = "index.html";
+}
