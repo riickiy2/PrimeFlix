@@ -201,6 +201,18 @@ async function buscarCep() {
     alert("Erro ao buscar o CEP. Verifique sua conexão.");
   }
 }
+// ══════════════════════════════════════
+//  Limpa formulario do CEP
+// ══════════════════════════════════════
+
+function limpa_formulario_cep (){
+  document.getElementById("rua").value = ("");
+  document.getElementById("bairro").value = ("");
+  document.getElementById("cidade").value = ("");
+  document.getElementById("uf").value = ("");
+  document.getElementById("numero").value = ("");
+}
+
 
 // ══════════════════════════════════════
 //  HELPERS DE ERRO
