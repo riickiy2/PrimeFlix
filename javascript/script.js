@@ -1,3 +1,7 @@
+// ══════════════════════════════════════
+// NAVEGAÇÃO LOGIN / CADASTRO
+// ══════════════════════════════════════
+
 function mostrarCadastro() {
   document.getElementById("login").style.display = "none";
   document.getElementById("cadastro").style.display = "block";
@@ -8,13 +12,88 @@ function mostrarLogin() {
   document.getElementById("cadastro").style.display = "none";
 }
 
-// ~~~~~~~~~~~~~~CADASTRAR~~~~~~~~~~~~~~
+// ══════════════════════════════════════
+//          CONTROLE DE ETAPAS
+// ══════════════════════════════════════
+
+function irParaEtapa(n){
+  //aqui esconde as etapas
+  [1, 2, 3].forEach(i => {
+    document.getElementById("etapa" + i).style.display = "nome";
+  })
+
+  //mostra a etapa desejada
+  document.getElementById("etapa" + n).style.display = "block";
+
+  // aqui atualiza o indicador visual
+  [1, 2, 3].forEach(i => {
+    const dot = document.getElementById("step-dot-" + i);
+    dot.classList.remove("active", "done");
+    if (i < n) dot.classList.add("done");
+    if (i === n) dot.classList.add("active");
+  });
+
+  // atualiza as linhas entre os steps
+  document.querySelectorAll(".step-line").forEach((line, idx) =>{
+    line.classList.toggle("done", idx + 1 < n);
+  });
+}
+
+function voltarEtapa(n){
+  irParaEtapa(n);
+}
+
+// ETAPA 1: Validação de dados pessoais
+function avancarEtapa1(){
+  limparErros();
+  let erro = false;
+
+  const nome = document.getElementById("nome").value.trim();
+  const nomeMae = document.getElementById("nomeMae").value.trim();
+  const cpf = document.getElementById("cpf").value;
+  
+  if (nome.length < 15 || nome.length > 60){
+    marcarErro("nome", "Nome deve ter entre 15 e 60 caracteres");
+    erro = true
+  }
+  if (nomeMae.length < 15 || nome.length > 60){
+    marcarErro("nomeMar", "Nome deve ter entre 15 e 60 caracteres");
+    erro = true
+  }
+  if (cpf.length < 14){
+    marcarErro("cpf", "CPF inválido");
+    erro = true
+  }
+
+  if (!erro) irParaEtapa(2);
+}
+
+// ETAPA 2: Adicionar endereço
+function avancarEtapa2(){
+  const rua = document.getElementById("rua").value.trim();
+  const numero = document.getElementById("numero").value.trim();
+
+  if (!rua) {
+    alert("Preencha o endereço! Use o botão Buscar para preencher pelo CEP.");
+    return;
+  }
+  if (!numero) {
+    document.getElementById("numero").focus();
+    return;
+  }
+
+  irParaEtapa(3);
+}
+
+// ══════════════════════════════════════
+//               CADASTRO
+// ══════════════════════════════════════
 function cadastrar() {
-  let user = document.getElementById("cadUser").value;
+  limparErros();
+  let erro = false;
+
+  let user = document.getElementById("cadUser").value.trim();
   let pass = document.getElementById("cadPass").value;
-  let nome = document.getElementById("nome").value;
-  let nomeMae = document.getElementById("nomeMae").value;
-  let cpf = document.getElementById("cpf").value;
   let confirmarSenha = document.getElementById("confirmarSenha").value;
 
   document.querySelectorAll(".erro").forEach((el) => (el.textContent = ""));
@@ -22,72 +101,36 @@ function cadastrar() {
     .querySelectorAll(".input-erro")
     .forEach((el) => el.classList.remove("input-erro")); // ← adicione
 
-  let erro = false;
-
-  //SE HOUVER CAMPOS VAZIOS
-  if (
-    user === "" ||
-    pass === "" ||
-    nome === "" ||
-    nomeMae === "" ||
-    cpf === "" ||
-    confirmarSenha === ""
-  ) {
-    alert("Preencha todos os campos!");
+  if (!user) {
+    alert("Informe um nome de usuario!")
     return;
   }
-
-  //NOME
-  if (nome.length < 15 || nome.length > 60) {
-    marcarErro("nome", "Nome deve ter entre 15 a 60 caracteres");
-    erro = true;
-  }
-
-  //NOME MÃE
-  if (nomeMae.length < 15 || nomeMae.length > 60) {
-    marcarErro("nomeMae", "Nome deve ter entre 15 a 60 caracteres");
-    erro = true;
-  }
-
-  //CPF
-  if (cpf.length < 14) {
-    marcarErro("cpf", "CPF inválido");
-    erro = true;
-  }
-
-  //SENHA
   if (pass.length < 8) {
-    marcarErro("cadPass", "Senha deve conter no mínimo 8 caracteres");
+    marcarErro("cadPass", "Senha deve ter no mínimo 8 caracteres");
+    erro = true;
+  }
+  if (pass !== confirmar) {
+    marcarErro ("confirmarSenha", "As senhas não coincidem");
     erro = true;
   }
 
-  //CONFIRMAR SENHA
-  if (pass !== confirmarSenha) {
-    marcarErro("confirmarSenha", "As senhas não coincidem");
-    erro = true;
-  }
-
-  //SE NÃO HOUVER ERRO
   if (!erro) {
-    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    usuarios.push({ usuario: user, senha: pass });
-
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    usuario.push({ usuario: user, senha: pass});
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    alert("Cadastro realizado!");
+    alert("Cadastro realizado com sucesso!");
     window.location = "home.html";
   }
 }
 
-// ~~~~~~~~~~~~~~LOGIN~~~~~~~~~~~~~~
+// ══════════════════════════════════════
+//                LOGIN
+// ══════════════════════════════════════
 function fazerLogin() {
-  let user = document.getElementById("loginUser").value;
-  let pass = document.getElementById("loginPass").value;
-
-  let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  let encontrado = usuarios.find((u) => u.usuario === user && u.senha === pass);
+  const user = document.getElementById("loginUser").value;  
+  const pass = document.getElementById("loginPass").value;
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  const encontrado = usuarios.find((u) => u.usuario === user && u.senha === pass);
 
   if (encontrado) {
     // SALVA QUE O USUÁRIO ESTÁ LOGADO
@@ -99,7 +142,9 @@ function fazerLogin() {
   }
 }
 
-// ~~~~~~~~~~~~~~MASCARA CPF~~~~~~~~~~~~~~
+// ══════════════════════════════════════
+//  MÁSCARAS
+// ══════════════════════════════════════
 function mascaraCPF(input) {
   let valor = input.value;
   // Remove tudo que n é digito
@@ -111,7 +156,6 @@ function mascaraCPF(input) {
   input.value = valor;
 }
 
-// ~~~~~~~~~~~~~~MASCARA TELEFONE~~~~~~~~~~~~~~
 function mascaraTel(input) {
   let value = input.value.replace(/\D/g, ""); // Remove não numéricos [4]
   value = value.replace(/^(\d{2})(\d)/g, "($1) $2"); // Coloca parênteses no DDD [8]
@@ -119,7 +163,6 @@ function mascaraTel(input) {
   input.value = value;
 }
 
-// ~~~~~~~~~~~~~~MASCARA CEP~~~~~~~~~~~~~~
 function mascaraCep(input) {
   let v = input.value.replace(/\D/g, "");
   // Formata o CEP como 00000-000 enquanto o usuário digita
