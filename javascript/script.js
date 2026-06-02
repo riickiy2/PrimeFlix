@@ -105,7 +105,7 @@ function cadastrar() {
     marcarErro("cadPass", "Senha deve ter no mínimo 8 caracteres");
     erro = true;
   }
-  if (pass !== confirmar) {
+  if (pass !== confirmarSenha) {
     marcarErro("confirmarSenha", "As senhas não coincidem");
     erro = true;
   }
