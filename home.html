@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/home.css" />
+    <link rel="stylesheet" href="style/theme.css" />
     <title>PrimeFlix</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
       <nav>
         <ul class="header-content">
           <li><a href="#" class="active">Inicio</a></li>
-          <li><a href="catalogo-page.html">Filmes</a></li>
+          <li><a href="catalogo-page.html">Catalogo</a></li>
           <li><a href="assinaturas.html">Assinaturas</a></li>
         </ul>
       </nav>
@@ -31,61 +32,186 @@
     <main>
       <div class="home">
         <div class="home-content">
-          <h1>Os melhores filmes e séries sem anuncio</h1>
+          <h1>Seu próximo filme favorito está aqui</h1>
         </div>
         <div class="second-content">
           <p>
-            Aproveite o melhor do streaming com um visual limpo e sem
-            interrupções!
+            Descubra os filmes e séries mais comentados do momento em uma
+            experiência simples e intuitiva.
           </p>
         </div>
       </div>
 
-      <!-- carousel -->
-      <div class="carousel-container">
-        <h2>Filmes em alta</h2>
+      <!-- SEÇÃO: INFORMAÇÕES DO APP (cards de texto) -->
+      <div class="home-page">
+        <!-- carousel -->
+        <div class="carousel-container">
+          <h2>Filmes em alta</h2>
+          <p class="carousel-text">
+            Descubra os filmes e séries mais assistidos do momento.
+          </p>
 
-        <div class="carousel">
-          <button class="btn prev">&#10094;</button>
+          <div class="carousel">
+            <button class="btn prev">&#10094;</button>
 
-          <div class="carousel-track" id="track">
-            <div class="card">
-              <img src="img/film-img/CasteloAnimado.jpg" />
+            <div class="carousel-track" id="track">
+              <div class="card">
+                <img src="img/film-img/CasteloAnimado.jpg" />
+              </div>
+              <div class="card"><img src="img/film-img/PorcoRosso.jpg" /></div>
+              <div class="card">
+                <img src="img/film-img/spider-man-into-the-spider.jpg" />
+              </div>
+              <div class="card">
+                <img src="img/film-img/black-panther.jpg" />
+              </div>
+              <div class="card">
+                <img src="img/film-img/i-want-to-eat-your-pancreas.jpg" />
+              </div>
+              <div class="card">
+                <img src="img/film-img/me-before-you.jpg" />
+              </div>
+              <div class="card">
+                <img src="img/film-img/interstellar.jpg" />
+              </div>
+              <div class="card"><img src="img/film-img/deadpool.jpg" /></div>
+              <div class="card">
+                <img src="img/film-img/entergalactic.jpg" />
+              </div>
+              <div class="card">
+                <img src="img/film-img/the-age-of-adaline.jpg" />
+              </div>
             </div>
-            <div class="card"><img src="img/film-img/PorcoRosso.jpg" /></div>
-            <div class="card">
-              <img src="img/film-img/spider-man-into-the-spider.jpg" />
+            <button class="btn next">&#10095;</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-telas">
+        <div class="telas-header">
+          <h2>Assista em qualquer dispositivo</h2>
+
+          <p>
+            Filmes e séries onde você estiver — na televisão, computador, tablet
+            ou celular, com a mesma qualidade e sem interrupções.
+          </p>
+        </div>
+
+        <div class="telas-grid">
+
+          <div class="telas-card">
+            <div class="telas-icons">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corpo da TV -->
+                <rect x="5" y="5" width="110" height="72" rx="6" ry="6"
+                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <!-- Tela interna -->
+                <rect x="12" y="12" width="96" height="58" rx="3" ry="3"
+                  fill="#0d0d1a"/>
+                <!-- Conteúdo na tela (play icon + brilho) -->
+                <circle cx="60" cy="41" r="14" fill="#ee471d" opacity="0.85"/>
+                <polygon points="55,34 55,48 70,41" fill="white"/>
+                <!-- Reflexo na tela -->
+                <rect x="14" y="14" width="30" height="4" rx="2" fill="white" opacity="0.08"/>
+                <!-- Base / pé -->
+                <rect x="45" y="77" width="30" height="6" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+                <rect x="35" y="83" width="50" height="4" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+              </svg>
             </div>
-            <div class="card">
-              <img src="img/film-img/black-panther.jpg" />
-            </div>
-            <div class="card">
-              <img src="img/film-img/i-want-to-eat-your-pancreas.jpg" />
-            </div>
-            <div class="card">
-              <img src="img/film-img/me-before-you.jpg" />
-            </div>
-            <div class="card">
-              <img src="img/film-img/interstellar.jpg" />
-            </div>
-            <div class="card"><img src="img/film-img/deadpool.jpg" /></div>
-            <div class="card">
-              <img src="img/film-img/entergalactic.jpg" />
-            </div>
-            <div class="card">
-              <img src="img/film-img/the-age-of-adaline.jpg" />
-            </div>
+            <h3>Televisão</h3>
+            <p>Tela grande para o melhor da experiência cinematográfica em casa.</p>
           </div>
 
-          <button class="btn next">&#10095;</button>
-        </div>
-      </div>
+          <div class="telas-card">
+            <div class="telas-icons">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Monitor -->
+                <rect x="10" y="5" width="100" height="65" rx="5" ry="5"
+                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <!-- Tela interna -->
+                <rect x="17" y="12" width="86" height="51" rx="3" ry="3"
+                  fill="#0d0d1a"/>
+                <!-- Conteúdo na tela -->
+                <rect x="22" y="17" width="76" height="6" rx="2" fill="#ee471d" opacity="0.6"/>
+                <rect x="22" y="26" width="50" height="3" rx="1" fill="#ffffff" opacity="0.2"/>
+                <rect x="22" y="32" width="60" height="3" rx="1" fill="#ffffff" opacity="0.15"/>
+                <rect x="22" y="38" width="40" height="3" rx="1" fill="#ffffff" opacity="0.1"/>
+                <circle cx="85" cy="42" r="10" fill="#ee471d" opacity="0.7"/>
+                <polygon points="81,37 81,47 91,42" fill="white"/>
+                <!-- Base pescoço -->
+                <rect x="54" y="70" width="12" height="10" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+                <!-- Base -->
+                <rect x="38" y="80" width="44" height="5" rx="3" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Computador</h3>
+            <p>Navegue pelo catálogo direto do seu navegador, sem instalar nada.</p>
+          </div>
 
-      <div class="home-page">
-        <div class="page-info">
-          <h2>Alguma informação</h2>
+          <div class="telas-card">
+            <div class="telas-icons">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corpo do tablet -->
+                <rect x="22" y="4" width="76" height="92" rx="8" ry="8"
+                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <!-- Tela interna -->
+                <rect x="28" y="14" width="64" height="72" rx="3" ry="3"
+                  fill="#0d0d1a"/>
+                <!-- Botão home -->
+                <circle cx="60" cy="92" r="0" fill="none"/>
+                <!-- Câmera -->
+                <circle cx="60" cy="9" r="2" fill="#ee471d" opacity="0.6"/>
+                <!-- Conteúdo na tela -->
+                <rect x="32" y="18" width="56" height="35" rx="2" fill="#111122"/>
+                <circle cx="60" cy="35" r="10" fill="#ee471d" opacity="0.75"/>
+                <polygon points="56,30 56,40 66,35" fill="white"/>
+                <rect x="32" y="57" width="30" height="3" rx="1" fill="#ffffff" opacity="0.3"/>
+                <rect x="32" y="63" width="42" height="3" rx="1" fill="#ffffff" opacity="0.15"/>
+                <rect x="32" y="69" width="25" height="3" rx="1" fill="#ffffff" opacity="0.1"/>
+              </svg>
+            </div>
+            <h3>Tablet</h3>
+            <p>Conforto portátil para maratonar séries onde quiser.</p>
+          </div>
+
+          <div class="telas-card">
+            <div class="telas-icons">
+              <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Corpo do celular -->
+                <rect x="35" y="3" width="50" height="94" rx="10" ry="10"
+                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <!-- Tela interna -->
+                <rect x="40" y="13" width="40" height="72" rx="4" ry="4"
+                  fill="#0d0d1a"/>
+                <!-- Notch / câmera -->
+                <rect x="53" y="7" width="14" height="4" rx="2" fill="#0d0d1a"/>
+                <!-- Botão home -->
+                <circle cx="60" cy="94" r="0" fill="none"/>
+                <!-- Conteúdo na tela -->
+                <rect x="42" y="15" width="36" height="22" rx="2" fill="#111122"/>
+                <circle cx="60" cy="26" r="7" fill="#ee471d" opacity="0.75"/>
+                <polygon points="57,22 57,30 64,26" fill="white"/>
+                <rect x="42" y="41" width="20" height="3" rx="1" fill="#ffffff" opacity="0.35"/>
+                <rect x="42" y="47" width="30" height="3" rx="1" fill="#ffffff" opacity="0.2"/>
+                <rect x="42" y="53" width="24" height="3" rx="1" fill="#ffffff" opacity="0.12"/>
+                <!-- Mini cards de filmes -->
+                <rect x="42" y="60" width="17" height="22" rx="2" fill="#ee471d" opacity="0.3"/>
+                <rect x="61" y="60" width="17" height="22" rx="2" fill="#ee471d" opacity="0.2"/>
+              </svg>
+            </div>
+            <h3>Celular</h3>
+            <p>Leve o entretenimento no bolso e assista a qualquer hora.</p>
+          </div>
         </div>
-      </div>
+
+        <div class="devices-divider">
+          <span>Um login. Todos os dispositivos.</span>
+        </div>
+      </section>
+
+      
+
+
     </main>
 
     <footer>
