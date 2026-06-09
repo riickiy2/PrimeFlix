@@ -291,17 +291,5 @@ footer {
   .mobile-menu.open {
     display: block;
   }
-
-  .home-content h1 {
-    font-size: 2.8rem;
-  }
-
-  .second-content {
-    font-size: 1rem;
-  }
-
-  .telas-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
