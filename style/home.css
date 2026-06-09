@@ -24,13 +24,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 15px 30px;
   background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000; /* Garante que fique acima do conteúdo */
   backdrop-filter: blur(5px); /*Filtro para dar um Blur no header*/
+  height: 11vh;
+  box-shadow: 0px 1px 10px rgb(90, 82, 82);
 }
 
 .header-img {
@@ -112,6 +114,7 @@ header {
 
 /* -------------------------------------- */
 .home-page {
+  border-top: 2px solid #c7c7c7;
   display: flex;
   text-align: center;
   padding: 30px 16px;
@@ -189,7 +192,7 @@ header {
   right: 0;
 }
 
-/*==========================FOOTER==========================*/
+/*==========================CARD==========================*/
 .section-telas {
   padding: 80px 40px 60px;
   display: flex;
@@ -334,44 +337,6 @@ footer {
 }
 
 /* ============ RESPONSIVIDADE ============ */
-/* Tablets e celulares grandes (até 768px)*/
-@media (max-width: 786px) {
-  header {
-    flex-wrap: wrap; /* quebra a linha para baixo */
-    gap: 10px;
-    padding: 10px 15px;
-  }
-
-  .header-img {
-    width: 110px; /* reduz o tamanho da img */
-  }
-
-  .header-content {
-    gap: 10px;
-    order: 3;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .header-content a {
-    font-size: medium;
-    margin-left: 0; /* o botao onde antes se encontrava abaixo, agora está do lado dos botões de navegação */
-  }
-
-  .butao {
-    font-size: medium;
-    padding: 6px 12px;
-  }
-
-  .home-content h1 {
-    font-size: clamp(
-      2rem,
-      8vw,
-      5rem
-    ); /* clamp(mínimo, ideal, máximo) ajusta o tamanho da fonte automaticamente conforme a tela */
-  }
-
-  .home-p {
-    font-size: clamp(0.85rem, 3vw, 1rem);
-  }
+@media (max-width: 999px) {
+  
 }
