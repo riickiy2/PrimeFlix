@@ -45,11 +45,6 @@ if (track && nextBtn && prevBtn) {
     }
     track.style.transform = `translateX(-${index * getCardWidth()}px)`;
   });
-
-  windows.addEventListener("resize", () => {
-    index = 0;
-    track.style.transform = "translatex(0)";
-  });
 }
 
 // ══════════════════════════════════════
