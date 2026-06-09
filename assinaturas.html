@@ -18,12 +18,36 @@
 
       <nav>
         <ul class="header-content">
-          <li><a href="home.html">Inicio</a></li>
-          <li><a href="catalogo-page.html">Catalogo</a></li>
-          <li><a href="#" class="active">Assinaturas</a></li>
+          <li><a href="#" class="active header-item">Inicio</a></li>
+          <li><a href="catalogo-page.html" class="header-item">Catalogo</a></li>
+          <li>
+            <a href="assinaturas.html " class="header-item">Assinaturas</a>
+          </li>
         </ul>
       </nav>
-      <button class="butao" onclick="logout()">Sair</button>
+
+      <div class="button-out">
+        <button class="butao" onclick="logout()">Sair</button>
+      </div>
+
+      <div class="mobile-menu-icon">
+        <button onclick="menuShow()">
+          <img src="img/icon/menu.png" alt="Abrir Menu" />
+        </button>
+      </div>
+
+      <!-- Menu Hamburguer -->
+      <div class="mobile-menu">
+        <ul class="mobile-nav">
+          <li><a href="catalogo-page.html">Catálogo</a></li>
+          <li><a href="#" class="active">Início</a></li>
+          <li><a href="assinaturas.html">Assinaturas</a></li>
+        </ul>
+
+        <div class="mobile-button-out">
+          <button class="butao" onclick="logout()">Sair</button>
+        </div>
+      </div>
     </header>
 
     <main>

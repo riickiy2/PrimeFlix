@@ -70,6 +70,82 @@ header {
   background-color: rgb(224, 54, 54);
 }
 
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu-icon button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-icon img {
+  width: 32px;
+}
+
+/* Menu escondido */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 11vh;
+  right: 20px;
+
+  width: 260px;
+  padding: 20px;
+
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  animation: fadeMenu 0.3s ease;
+}
+
+/* lista do menu */
+.mobile-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+  color: #ee471d;
+  padding-left: 8px;
+}
+
+/* botão sair */
+.mobile-button-out {
+  margin-top: 20px;
+}
+
+.mobile-button-out button {
+  width: 100%;
+}
+
+/* animação */
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*=========================MAIN=========================*/
 
 main {
@@ -169,41 +245,31 @@ footer {
 }
 
 /* ============ RESPONSIVIDADE ============ */
-/* Tablets (até 768px) */
-@media (max-width: 768px){
-  header{
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 15px;
+@media (max-width: 730px) {
+
+  nav,
+  .button-out {
+    display: none;
   }
 
-  .header-img{
-    width: 110px;
+  .mobile-menu-icon {
+    display: block;
   }
 
-  .header-content{
-    gap: 10px;
-    order: 3;
-    width: 100%;
-    justify-content: center;
+  .mobile-menu.open {
+    display: block;
   }
 
-  .header-content a{
-    font-size: medium;
-    margin-left: 0;
+  .home-content h1 {
+    font-size: 2.8rem;
   }
 
-  .butao{
-    font-size: medium;
-    padding: 6px 12px;
+  .second-content {
+    font-size: 1rem;
   }
 
-  .card{
-    min-width: 160px;
-  }
-
-  .card img{
-    height: 240px;
+  .telas-grid {
+    grid-template-columns: 1fr;
   }
 }
 
