@@ -19,13 +19,36 @@
 
       <nav>
         <ul class="header-content">
-          <li><a href="#" class="active">Inicio</a></li>
-          <li><a href="catalogo-page.html">Catalogo</a></li>
-          <li><a href="assinaturas.html">Assinaturas</a></li>
+          <li><a href="#" class="active header-item">Inicio</a></li>
+          <li><a href="catalogo-page.html" class="header-item">Catalogo</a></li>
+          <li>
+            <a href="assinaturas.html " class="header-item">Assinaturas</a>
+          </li>
         </ul>
       </nav>
 
-      <button class="butao" onclick="logout()">Sair</button>
+      <div class="button-out">
+        <button class="butao" onclick="logout()">Sair</button>
+      </div>
+
+      <div class="mobile-menu-icon">
+        <button onclick="menuShow()">
+          <img src="img/icon/menu.png" alt="Abrir Menu" />
+        </button>
+      </div>
+
+      <!-- Menu Hamburguer -->
+      <div class="mobile-menu">
+        <ul class="mobile-nav">
+          <li><a href="#" class="active">Início</a></li>
+          <li><a href="catalogo-page.html">Catálogo</a></li>
+          <li><a href="assinaturas.html">Assinaturas</a></li>
+        </ul>
+
+        <div class="mobile-button-out">
+          <button class="butao" onclick="logout()">Sair</button>
+        </div>
+      </div>
     </header>
 
     <!-- Pagina -->
@@ -98,76 +121,234 @@
         </div>
 
         <div class="telas-grid">
-
           <div class="telas-card">
             <div class="telas-icons">
               <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                 <!-- Corpo da TV -->
-                <rect x="5" y="5" width="110" height="72" rx="6" ry="6"
-                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <rect
+                  x="5"
+                  y="5"
+                  width="110"
+                  height="72"
+                  rx="6"
+                  ry="6"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="3"
+                />
                 <!-- Tela interna -->
-                <rect x="12" y="12" width="96" height="58" rx="3" ry="3"
-                  fill="#0d0d1a"/>
+                <rect
+                  x="12"
+                  y="12"
+                  width="96"
+                  height="58"
+                  rx="3"
+                  ry="3"
+                  fill="#0d0d1a"
+                />
                 <!-- Conteúdo na tela (play icon + brilho) -->
-                <circle cx="60" cy="41" r="14" fill="#ee471d" opacity="0.85"/>
-                <polygon points="55,34 55,48 70,41" fill="white"/>
+                <circle cx="60" cy="41" r="14" fill="#ee471d" opacity="0.85" />
+                <polygon points="55,34 55,48 70,41" fill="white" />
                 <!-- Reflexo na tela -->
-                <rect x="14" y="14" width="30" height="4" rx="2" fill="white" opacity="0.08"/>
+                <rect
+                  x="14"
+                  y="14"
+                  width="30"
+                  height="4"
+                  rx="2"
+                  fill="white"
+                  opacity="0.08"
+                />
                 <!-- Base / pé -->
-                <rect x="45" y="77" width="30" height="6" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
-                <rect x="35" y="83" width="50" height="4" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+                <rect
+                  x="45"
+                  y="77"
+                  width="30"
+                  height="6"
+                  rx="2"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="2"
+                />
+                <rect
+                  x="35"
+                  y="83"
+                  width="50"
+                  height="4"
+                  rx="2"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="2"
+                />
               </svg>
             </div>
             <h3>Televisão</h3>
-            <p>Tela grande para o melhor da experiência cinematográfica em casa.</p>
+            <p>
+              Tela grande para o melhor da experiência cinematográfica em casa.
+            </p>
           </div>
 
           <div class="telas-card">
             <div class="telas-icons">
               <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                 <!-- Monitor -->
-                <rect x="10" y="5" width="100" height="65" rx="5" ry="5"
-                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <rect
+                  x="10"
+                  y="5"
+                  width="100"
+                  height="65"
+                  rx="5"
+                  ry="5"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="3"
+                />
                 <!-- Tela interna -->
-                <rect x="17" y="12" width="86" height="51" rx="3" ry="3"
-                  fill="#0d0d1a"/>
+                <rect
+                  x="17"
+                  y="12"
+                  width="86"
+                  height="51"
+                  rx="3"
+                  ry="3"
+                  fill="#0d0d1a"
+                />
                 <!-- Conteúdo na tela -->
-                <rect x="22" y="17" width="76" height="6" rx="2" fill="#ee471d" opacity="0.6"/>
-                <rect x="22" y="26" width="50" height="3" rx="1" fill="#ffffff" opacity="0.2"/>
-                <rect x="22" y="32" width="60" height="3" rx="1" fill="#ffffff" opacity="0.15"/>
-                <rect x="22" y="38" width="40" height="3" rx="1" fill="#ffffff" opacity="0.1"/>
-                <circle cx="85" cy="42" r="10" fill="#ee471d" opacity="0.7"/>
-                <polygon points="81,37 81,47 91,42" fill="white"/>
+                <rect
+                  x="22"
+                  y="17"
+                  width="76"
+                  height="6"
+                  rx="2"
+                  fill="#ee471d"
+                  opacity="0.6"
+                />
+                <rect
+                  x="22"
+                  y="26"
+                  width="50"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.2"
+                />
+                <rect
+                  x="22"
+                  y="32"
+                  width="60"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.15"
+                />
+                <rect
+                  x="22"
+                  y="38"
+                  width="40"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.1"
+                />
+                <circle cx="85" cy="42" r="10" fill="#ee471d" opacity="0.7" />
+                <polygon points="81,37 81,47 91,42" fill="white" />
                 <!-- Base pescoço -->
-                <rect x="54" y="70" width="12" height="10" rx="2" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+                <rect
+                  x="54"
+                  y="70"
+                  width="12"
+                  height="10"
+                  rx="2"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="2"
+                />
                 <!-- Base -->
-                <rect x="38" y="80" width="44" height="5" rx="3" fill="#1a1a2e" stroke="#ee471d" stroke-width="2"/>
+                <rect
+                  x="38"
+                  y="80"
+                  width="44"
+                  height="5"
+                  rx="3"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="2"
+                />
               </svg>
             </div>
             <h3>Computador</h3>
-            <p>Navegue pelo catálogo direto do seu navegador, sem instalar nada.</p>
+            <p>
+              Navegue pelo catálogo direto do seu navegador, sem instalar nada.
+            </p>
           </div>
 
           <div class="telas-card">
             <div class="telas-icons">
               <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                 <!-- Corpo do tablet -->
-                <rect x="22" y="4" width="76" height="92" rx="8" ry="8"
-                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <rect
+                  x="22"
+                  y="4"
+                  width="76"
+                  height="92"
+                  rx="8"
+                  ry="8"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="3"
+                />
                 <!-- Tela interna -->
-                <rect x="28" y="14" width="64" height="72" rx="3" ry="3"
-                  fill="#0d0d1a"/>
+                <rect
+                  x="28"
+                  y="14"
+                  width="64"
+                  height="72"
+                  rx="3"
+                  ry="3"
+                  fill="#0d0d1a"
+                />
                 <!-- Botão home -->
-                <circle cx="60" cy="92" r="0" fill="none"/>
+                <circle cx="60" cy="92" r="0" fill="none" />
                 <!-- Câmera -->
-                <circle cx="60" cy="9" r="2" fill="#ee471d" opacity="0.6"/>
+                <circle cx="60" cy="9" r="2" fill="#ee471d" opacity="0.6" />
                 <!-- Conteúdo na tela -->
-                <rect x="32" y="18" width="56" height="35" rx="2" fill="#111122"/>
-                <circle cx="60" cy="35" r="10" fill="#ee471d" opacity="0.75"/>
-                <polygon points="56,30 56,40 66,35" fill="white"/>
-                <rect x="32" y="57" width="30" height="3" rx="1" fill="#ffffff" opacity="0.3"/>
-                <rect x="32" y="63" width="42" height="3" rx="1" fill="#ffffff" opacity="0.15"/>
-                <rect x="32" y="69" width="25" height="3" rx="1" fill="#ffffff" opacity="0.1"/>
+                <rect
+                  x="32"
+                  y="18"
+                  width="56"
+                  height="35"
+                  rx="2"
+                  fill="#111122"
+                />
+                <circle cx="60" cy="35" r="10" fill="#ee471d" opacity="0.75" />
+                <polygon points="56,30 56,40 66,35" fill="white" />
+                <rect
+                  x="32"
+                  y="57"
+                  width="30"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.3"
+                />
+                <rect
+                  x="32"
+                  y="63"
+                  width="42"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.15"
+                />
+                <rect
+                  x="32"
+                  y="69"
+                  width="25"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.1"
+                />
               </svg>
             </div>
             <h3>Tablet</h3>
@@ -178,25 +359,95 @@
             <div class="telas-icons">
               <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
                 <!-- Corpo do celular -->
-                <rect x="35" y="3" width="50" height="94" rx="10" ry="10"
-                  fill="#1a1a2e" stroke="#ee471d" stroke-width="3"/>
+                <rect
+                  x="35"
+                  y="3"
+                  width="50"
+                  height="94"
+                  rx="10"
+                  ry="10"
+                  fill="#1a1a2e"
+                  stroke="#ee471d"
+                  stroke-width="3"
+                />
                 <!-- Tela interna -->
-                <rect x="40" y="13" width="40" height="72" rx="4" ry="4"
-                  fill="#0d0d1a"/>
+                <rect
+                  x="40"
+                  y="13"
+                  width="40"
+                  height="72"
+                  rx="4"
+                  ry="4"
+                  fill="#0d0d1a"
+                />
                 <!-- Notch / câmera -->
-                <rect x="53" y="7" width="14" height="4" rx="2" fill="#0d0d1a"/>
+                <rect
+                  x="53"
+                  y="7"
+                  width="14"
+                  height="4"
+                  rx="2"
+                  fill="#0d0d1a"
+                />
                 <!-- Botão home -->
-                <circle cx="60" cy="94" r="0" fill="none"/>
+                <circle cx="60" cy="94" r="0" fill="none" />
                 <!-- Conteúdo na tela -->
-                <rect x="42" y="15" width="36" height="22" rx="2" fill="#111122"/>
-                <circle cx="60" cy="26" r="7" fill="#ee471d" opacity="0.75"/>
-                <polygon points="57,22 57,30 64,26" fill="white"/>
-                <rect x="42" y="41" width="20" height="3" rx="1" fill="#ffffff" opacity="0.35"/>
-                <rect x="42" y="47" width="30" height="3" rx="1" fill="#ffffff" opacity="0.2"/>
-                <rect x="42" y="53" width="24" height="3" rx="1" fill="#ffffff" opacity="0.12"/>
+                <rect
+                  x="42"
+                  y="15"
+                  width="36"
+                  height="22"
+                  rx="2"
+                  fill="#111122"
+                />
+                <circle cx="60" cy="26" r="7" fill="#ee471d" opacity="0.75" />
+                <polygon points="57,22 57,30 64,26" fill="white" />
+                <rect
+                  x="42"
+                  y="41"
+                  width="20"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.35"
+                />
+                <rect
+                  x="42"
+                  y="47"
+                  width="30"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.2"
+                />
+                <rect
+                  x="42"
+                  y="53"
+                  width="24"
+                  height="3"
+                  rx="1"
+                  fill="#ffffff"
+                  opacity="0.12"
+                />
                 <!-- Mini cards de filmes -->
-                <rect x="42" y="60" width="17" height="22" rx="2" fill="#ee471d" opacity="0.3"/>
-                <rect x="61" y="60" width="17" height="22" rx="2" fill="#ee471d" opacity="0.2"/>
+                <rect
+                  x="42"
+                  y="60"
+                  width="17"
+                  height="22"
+                  rx="2"
+                  fill="#ee471d"
+                  opacity="0.3"
+                />
+                <rect
+                  x="61"
+                  y="60"
+                  width="17"
+                  height="22"
+                  rx="2"
+                  fill="#ee471d"
+                  opacity="0.2"
+                />
               </svg>
             </div>
             <h3>Celular</h3>
@@ -208,10 +459,6 @@
           <span>Um login. Todos os dispositivos.</span>
         </div>
       </section>
-
-      
-
-
     </main>
 
     <footer>
@@ -224,5 +471,6 @@
       </div>
     </footer>
     <script src="javascript/home.js"></script>
+    <script src="javascript/menu.js"></script>
   </body>
 </html>

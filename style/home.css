@@ -69,6 +69,83 @@ header {
   white-space: nowrap; /* nowrap impede o texto do botão de quebrar linha */
 }
 
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu-icon button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu-icon img {
+  width: 32px;
+}
+
+/* Menu escondido */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 11vh;
+  right: 20px;
+
+  width: 260px;
+  padding: 20px;
+
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  animation: fadeMenu 0.3s ease;
+}
+
+/* lista do menu */
+.mobile-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+  color: #ee471d;
+  padding-left: 8px;
+}
+
+/* botão sair */
+.mobile-button-out {
+  margin-top: 20px;
+}
+
+.mobile-button-out button {
+  width: 100%;
+}
+
+/* animação */
+@keyframes fadeMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /*=========================MAIN=========================*/
 
 /* primeira parte do HOME */
@@ -337,6 +414,30 @@ footer {
 }
 
 /* ============ RESPONSIVIDADE ============ */
-@media (max-width: 999px) {
-  
+@media (max-width: 730px) {
+
+  nav,
+  .button-out {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .home-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .second-content {
+    font-size: 1rem;
+  }
+
+  .telas-grid {
+    grid-template-columns: 1fr;
+  }
 }
