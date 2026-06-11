@@ -19,6 +19,35 @@ body {
   background-color: var(--body-bg);
 }
 
+#themeButton {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button-variante);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 140px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 999;
+}
+#themeButton svg {
+  fill: var(--button-variante-icon);
+}
+#themeButton svg:last-child {
+  display: none;
+}
+.darkmode #themeButton svg:first-child {
+  display: none;
+}
+.darkmode #themeButton svg:last-child {
+  display: block;
+}
+
 /* ====================HEADER==================== */
 header {
   display: flex;
@@ -32,7 +61,7 @@ header {
   z-index: 1000; /* Garante que fique acima do conteúdo */
   backdrop-filter: blur(5px); /*Filtro para dar um Blur no header*/
   height: 11vh;
-  box-shadow: 0px 1px 10px rgb(90, 82, 82);
+  box-shadow: 0px 1px 10px var(--header-shadow);
 }
 
 .header-img {
@@ -56,7 +85,7 @@ header {
 
 .header-content a:hover,
 .header-content a.active {
-  color: #ee471d;
+  color: var(--color-primary);
 }
 
 .butao {
@@ -64,10 +93,12 @@ header {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  background-color: #ee471d;
+  background-color: var(--color-primary);
   font-size: large;
   white-space: nowrap; /* nowrap impede o texto do botão de quebrar linha */
 }
+
+/*  */
 
 .mobile-menu-icon {
   display: none;
@@ -89,18 +120,13 @@ header {
   position: absolute;
   top: 11vh;
   right: 20px;
-
   width: 260px;
   padding: 20px;
-
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(10px);
-
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-
+  box-shadow: 0 10px 30px var(--shadow-default);
   animation: fadeMenu 0.3s ease;
 }
 

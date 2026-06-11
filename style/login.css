@@ -108,7 +108,7 @@ h1 {
 }
 
 .step.active .step-dot {
-  background: var(--step-active);
+  background: var(--accent);
   color: white;
   box-shadow: 0 0 0 4px rgba(212, 39, 16, 0.25);
 }
@@ -183,7 +183,7 @@ input::placeholder {
 
 input:focus,
 select:focus {
-  border-color: var(--input-focus);
+  border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(212, 39, 16, 0.18);
 }
 
@@ -245,7 +245,7 @@ select option {
 }
 
 .input-erro {
-  border-color: #ff4444 !important;
+  border-color: var(--color-danger) !important;
   box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.2) !important;
 }
 
@@ -271,7 +271,7 @@ select option {
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  background: var(--btn-hover);
   transform: translateY(-1px);
   box-shadow: 0 6px 18px rgba(212, 39, 16, 0.4);
 }

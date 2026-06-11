@@ -2,26 +2,33 @@
 /* COR PRINCIPAL */
 /* ═══════════════════════════════*/
 :root {
+  /* background */
   --body-bg: rgb(124, 104, 104);
   --card-bg: rgb(61, 47, 47);
-  --accent: #d42710;
-  --accent-hover: #b8200d;
+
+  /* text */
   --text-light: #e5e7eb;
   --text-muted: #b0a0a0;
+
+  /* steps */
+  --step-inactive: #7a6060;
+  --step-done: #a83010;
+  --accent: #d42710;
+  
+  --color-primary: #ee471d;
+  --color-danger: #ff4444; /* new */
+  --header-shadow: rgb(90, 82, 82); /* new */
+  --shadow-default: rgba(0, 0, 0, 0.15);
+  --btn-hover: #b8200d;
   --input-bg: rgb(170, 143, 143);
   --input-border: rgb(236, 236, 236);
   --input-color: #ffffff;
-  --input-focus: #d42710;
   --readonly-bg: rgba(0, 0, 0, 0.15);
-  --step-inactive: #7a6060;
-  --step-active: #d42710;
-  --step-done: #a83010;
-
   --button-variante: rgb(179, 179, 179);
 }
 
 /* ═══════════════════════════════*/
-/* DARK MODE */ 
+/* DARK MODE */
 /* ═══════════════════════════════*/
 
 .darkmode {
