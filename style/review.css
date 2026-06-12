@@ -1,3 +1,131 @@
-body{
-    background-color: var(--body-bg);
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Sen:wght@400..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background: var(--body-bg);
+  padding: 30px;
+}
+
+#themeButton {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--button-variante);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 140px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 999;
+}
+#themeButton svg {
+  fill: var(--button-variante-icon);
+}
+#themeButton svg:last-child {
+  display: none;
+}
+.darkmode #themeButton svg:first-child {
+  display: none;
+}
+.darkmode #themeButton svg:last-child {
+  display: block;
+}
+
+.movie-page {
+  width: 100%;
+}
+
+.movie-container {
+  background: var(--card-bg);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* TRAILER */
+
+.movie-trailer {
+  width: 100%;
+  height: 900px;
+}
+
+.movie-trailer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* INFORMAÇÕES */
+
+.movie-info {
+  padding: 30px;
+}
+
+.movie-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.movie-poster {
+  width: 230px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.movie-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.movie-rating {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.movie-rating span {
+  background: var(--button-variante);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.movie-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* SINOPSE */
+
+.movie-synopsis {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
+
+.movie-synopsis h2 {
+  margin-bottom: 15px;
+}
+
+.movie-synopsis p {
+  line-height: 1.8;
+  max-width: 900px;
 }
