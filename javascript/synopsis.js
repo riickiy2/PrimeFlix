@@ -90,4 +90,17 @@ const movies = {
         synopsis: "Em um futuro próximo, a Terra enfrenta uma crise ambiental que ameaça a sobrevivência da humanidade. Cooper, um ex-piloto da NASA e engenheiro, é recrutado para uma missão interestelar através de um buraco de minhoca próximo a Saturno. Junto com uma equipe de cientistas, ele busca planetas habitáveis para garantir o futuro da espécie humana, enquanto lida com os efeitos da relatividade do tempo e a distância de sua família.",
     },
 
+    deadpool: {
+        title: "Deadpool",
+        year: 2016,
+        director: "Tim Miller",
+        studio: "20th Century Fox, em associação com Marvel Entertainment",
+        imdb: "8,0/10",
+        tomato: "90%",
+        trailer: "https://www.youtube.com/embed/Q9X-bAE8KTc?si=ybhXz3zYaN2m8huE",
+        poster: "/img/film-img/deadpool.jpg",
+
+        synopsis: "Wade Wilson é um ex-militar e mercenário que descobre ter câncer terminal. Desesperado por uma cura, ele se submete a um experimento secreto que lhe concede poderes de regeneração extraordinários, mas também deixa seu corpo desfigurado. Adotando a identidade de Deadpool, ele passa a caçar os responsáveis por sua transformação enquanto utiliza seu humor ácido e quebra constantemente a quarta parede.",
+    },
+
 };
