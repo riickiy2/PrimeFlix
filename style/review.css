@@ -114,11 +114,25 @@ body {
   gap: 10px;
 }
 
+.movie-meta strong {
+  color: var(--text-light);
+}
+
+.movie-meta p {
+  color: var(--text-muted);
+}
 /* SINOPSE */
 
 .movie-synopsis {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 20px;
+}
+
+.movie-synopsis h2{
+  color: var(--text-light);
+}
+.movie-synopsis p{
+  color: var(--text-muted);
 }
 
 .movie-synopsis h2 {

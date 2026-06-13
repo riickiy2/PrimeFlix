@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/review.css">
-    <link rel="stylesheet" href="/style/global/theme.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/review.css" />
+    <link rel="stylesheet" href="/style/global/theme.css" />
     <title>review</title>
-</head>
-<body>
+  </head>
+  <body>
     <button id="themeButton">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,59 +34,56 @@
     </button>
 
     <div class="movie-page">
-  <div class="movie-container">
+      <div class="movie-container">
+        <!-- Trailer -->
+        <section class="movie-trailer">
+          <iframe
+            src="https://www.youtube.com/embed/2x5SejvTMeA"
+            title="Trailer"
+            allowfullscreen
+          >
+          </iframe>
+        </section>
 
-    <!-- Trailer -->
-    <section class="movie-trailer">
-      <iframe
-        src="https://www.youtube.com/embed/2x5SejvTMeA"
-        title="Trailer"
-        allowfullscreen>
-      </iframe>
-    </section>
+        <!-- Informações -->
+        <section class="movie-info">
+          <div class="movie-header">
+            <img
+              src="/img/film-img/CasteloAnimado.jpg"
+              alt="Poster do filme"
+              class="movie-poster"
+            />
 
-    <!-- Informações -->
-    <section class="movie-info">
+            <div class="movie-text">
+              <h1>Howl’s Moving Castle</h1>
 
-      <div class="movie-header">
-        <img
-          src="/img/film-img/CasteloAnimado.jpg"
-          alt="Poster do filme"
-          class="movie-poster"
-        />
+              <div class="movie-rating">
+                <span>⭐ IMDb 8.2</span>
+                <span>🍅 Rotten 87%</span>
+              </div>
 
-        <div class="movie-text">
-          <h1>Howl’s Moving Castle</h1>
-
-          <div class="movie-rating">
-            <span>⭐ IMDb 8.2</span>
-            <span>🍅 Rotten 87%</span>
+              <div class="movie-meta">
+                <p><strong>Ano:</strong> 2004</p>
+                <p><strong>Diretor:</strong> Hayao Miyazaki</p>
+                <p><strong>Estúdio:</strong> Studio Ghibli</p>
+              </div>
+            </div>
           </div>
 
-          <div class="movie-meta">
-            <p><strong>Ano:</strong> 2004</p>
-            <p><strong>Diretor:</strong> Hayao Miyazaki</p>
-            <p><strong>Estúdio:</strong> Studio Ghibli</p>
+          <div class="movie-synopsis">
+            <h2>Sinopse</h2>
+
+            <p>
+              Sophie, uma jovem chapeleira, é transformada em uma senhora idosa
+              por uma bruxa que invade sua loja e a amaldiçoa. Em sua jornada,
+              ela encontra o misterioso mago Howl e acaba envolvida em uma
+              guerra entre reinos.
+            </p>
           </div>
-        </div>
+        </section>
       </div>
+    </div>
 
-      <div class="movie-synopsis">
-        <h2>Sinopse</h2>
-
-        <p>
-          Sophie, uma jovem chapeleira, é transformada em
-          uma senhora idosa por uma bruxa que invade sua
-          loja e a amaldiçoa. Em sua jornada, ela encontra
-          o misterioso mago Howl e acaba envolvida em uma
-          guerra entre reinos.
-        </p>
-      </div>
-
-    </section>
-  </div>
-</div>
-    
-    <script src="javascript/dark-mode.js"></script>
-</body>
+    <script src="/javascript/dark-mode.js"></script>
+  </body>
 </html>
