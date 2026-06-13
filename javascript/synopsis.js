@@ -103,4 +103,17 @@ const movies = {
         synopsis: "Wade Wilson é um ex-militar e mercenário que descobre ter câncer terminal. Desesperado por uma cura, ele se submete a um experimento secreto que lhe concede poderes de regeneração extraordinários, mas também deixa seu corpo desfigurado. Adotando a identidade de Deadpool, ele passa a caçar os responsáveis por sua transformação enquanto utiliza seu humor ácido e quebra constantemente a quarta parede.",
     },
 
+    entergalatic: {
+        title: "Entergalactic",
+        year: 2022,
+        director: "Fletcher Moules e Scott Mescudi",
+        studio: "Netflix Animation, Mad Solar e DNEG Animation",
+        imdb: "7,4/10",
+        tomato: "94%",
+        trailer: "https://www.youtube.com/embed/eil_ZV9P8AY?si=hXy9bhStNXYoNpmW",
+        poster: "/img/film-img/entergalactic.jpg",
+
+        synopsis: "A história acompanha Jabari, um jovem artista talentoso que está prestes a alcançar o sucesso em Nova York. Ao se mudar para um novo apartamento, ele conhece sua vizinha Meadow, uma fotógrafa criativa e independente. Conforme os dois desenvolvem uma conexão especial, precisam equilibrar amor, carreira, amizades e os desafios da vida adulta.",
+    },
+
 };
