@@ -73,8 +73,21 @@ const movies = {
         tomato: "73%",
         trailer: "https://www.youtube.com/embed/T0MmkG_nG1U?si=DS0Rt5k-hPIo3YA4" ,
         poster: "/img/film-img/me-before-you.jpg",
-        
+
         synopsis: "Louisa Clark é uma jovem alegre e espontânea que aceita o emprego de cuidadora de Will Traynor, um ex-banqueiro bem-sucedido que ficou tetraplégico após um acidente. Apesar das diferenças entre eles, os dois desenvolvem uma forte conexão que transforma suas vidas. Ao longo da convivência, Louisa tenta mostrar a Will que a vida ainda pode oferecer novas experiências e motivos para seguir em frente.",
+    },
+
+    interestelar: {
+        title: "Interestelar",
+        year: 2014,
+        director: "Christopher Nolan",
+        studio: "Paramount Pictures e Warner Bros. Pictures",
+        imdb: "8,7/10",
+        tomato: "87%",
+        trailer: "https://www.youtube.com/embed/i6avfCqKcQo?si=J-3aVuSu7GQwg_De",
+        poster: "/img/film-img/interstellar.jpg",
+
+        synopsis: "Em um futuro próximo, a Terra enfrenta uma crise ambiental que ameaça a sobrevivência da humanidade. Cooper, um ex-piloto da NASA e engenheiro, é recrutado para uma missão interestelar através de um buraco de minhoca próximo a Saturno. Junto com uma equipe de cientistas, ele busca planetas habitáveis para garantir o futuro da espécie humana, enquanto lida com os efeitos da relatividade do tempo e a distância de sua família.",
     },
 
 };
