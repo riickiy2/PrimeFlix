@@ -64,4 +64,17 @@ const movies = {
         synopsis: "A história acompanha um estudante introvertido que encontra o diário de sua colega de classe, Sakura Yamauchi. Ao ler o diário, ele descobre que ela sofre de uma doença terminal no pâncreas e tem pouco tempo de vida. Apesar de suas personalidades opostas, os dois desenvolvem uma amizade profunda que transforma a maneira como enxergam a vida, os relacionamentos e o valor do tempo.",
     },
 
+    beforeYou: {
+        title: "Como eu era antes de Você",
+        year: 2016,
+        director: "Thea Sharrock",
+        studio: "Warner Bros. Pictures, Metro-Goldwyn-Mayer e New Line Cinema",
+        imdb: "7,4/10",
+        tomato: "73%",
+        trailer: "https://www.youtube.com/embed/T0MmkG_nG1U?si=DS0Rt5k-hPIo3YA4" ,
+        poster: "/img/film-img/me-before-you.jpg",
+        
+        synopsis: "Louisa Clark é uma jovem alegre e espontânea que aceita o emprego de cuidadora de Will Traynor, um ex-banqueiro bem-sucedido que ficou tetraplégico após um acidente. Apesar das diferenças entre eles, os dois desenvolvem uma forte conexão que transforma suas vidas. Ao longo da convivência, Louisa tenta mostrar a Will que a vida ainda pode oferecer novas experiências e motivos para seguir em frente.",
+    },
+
 };
