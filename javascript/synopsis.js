@@ -116,4 +116,17 @@ const movies = {
         synopsis: "A história acompanha Jabari, um jovem artista talentoso que está prestes a alcançar o sucesso em Nova York. Ao se mudar para um novo apartamento, ele conhece sua vizinha Meadow, uma fotógrafa criativa e independente. Conforme os dois desenvolvem uma conexão especial, precisam equilibrar amor, carreira, amizades e os desafios da vida adulta.",
     },
 
+    adeline: {
+        title: "A Incrível História de Adaline",
+        year: 2015,
+        director: "Lee Toland Krieger",
+        studio: "Lakeshore Entertainment e Sidney Kimmel Entertainment",
+        imdb: "7,2/10",
+        tomato: "67%",
+        trailer: "https://www.youtube.com/embed/ZzirthtD7kM?si=mi37dkPCxq8Eporl" ,
+        poster: "/img/film-img/the-age-of-adaline.jpg",
+        
+        synopsis: "Adaline Bowman leva uma vida aparentemente comum até sofrer um acidente que a impede de envelhecer. Permanecendo com a aparência de 29 anos durante décadas, ela vive isolada e muda constantemente de identidade para esconder seu segredo. Sua vida muda quando conhece Ellis Jones, um homem por quem se apaixona, forçando-a a escolher entre continuar escondida ou finalmente viver o amor e enfrentar as consequências de sua condição.",
+    },
+
 };
