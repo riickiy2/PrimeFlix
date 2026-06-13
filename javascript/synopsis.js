@@ -38,4 +38,17 @@ const movies = {
         synopsis: "Miles Morales, um adolescente do Brooklyn, é mordido por uma aranha radioativa e adquire poderes semelhantes aos do Homem-Aranha. Quando um experimento interdimensional dá errado, diferentes versões do Homem-Aranha de universos paralelos chegam ao seu mundo. Juntos, eles precisam impedir uma ameaça que coloca em risco todas as realidades enquanto Miles aprende o que significa ser um herói.",
     },
 
+    pantera: {
+        title: "Pantera Negra (Black Panther)",
+        year: 2018,
+        director: "Ryan Coogler",
+        studio: "Marvel Studios",
+        imdb: "7,3/10",
+        tomato: "79%",
+        trailer: "https://www.youtube.com/embed/dxWvtMOGAhw?si=0UwKL5Fy_bSIx7tH",
+        poster: "/img/film-img/black-panther.jpg",
+
+        synopsis: "Após a morte de seu pai, o rei de Wakanda, T'Challa retorna à sua nação africana altamente desenvolvida para assumir o trono. Porém, um inimigo ligado ao passado do país surge e ameaça não apenas Wakanda, mas também o mundo. Para proteger seu povo, T'Challa precisa unir seus aliados e assumir plenamente o papel de Pantera Negra.",
+    },
+
 };
