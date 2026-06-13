@@ -51,4 +51,17 @@ const movies = {
         synopsis: "Após a morte de seu pai, o rei de Wakanda, T'Challa retorna à sua nação africana altamente desenvolvida para assumir o trono. Porém, um inimigo ligado ao passado do país surge e ameaça não apenas Wakanda, mas também o mundo. Para proteger seu povo, T'Challa precisa unir seus aliados e assumir plenamente o papel de Pantera Negra.",
     },
 
+    pancreas: {
+        title: "Eu quero comer seu pâncreas (I want to eat your pâncreas)",
+        year: 2018,
+        director: "Shinichiro Ushijima",
+        studio: "Studio VOLN",
+        imdb: "8,1/10",
+        tomato: "90%",
+        trailer: "https://www.youtube.com/embed/MmoBvmJA9XI?si=glla1OznwuIil9CI" ,
+        poster: "/img/film-img/i-want-to-eat-your-pancreas.jpg",
+
+        synopsis: "A história acompanha um estudante introvertido que encontra o diário de sua colega de classe, Sakura Yamauchi. Ao ler o diário, ele descobre que ela sofre de uma doença terminal no pâncreas e tem pouco tempo de vida. Apesar de suas personalidades opostas, os dois desenvolvem uma amizade profunda que transforma a maneira como enxergam a vida, os relacionamentos e o valor do tempo.",
+    },
+
 };
