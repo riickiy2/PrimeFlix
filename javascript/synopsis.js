@@ -129,4 +129,16 @@ const movies = {
         synopsis: "Adaline Bowman leva uma vida aparentemente comum até sofrer um acidente que a impede de envelhecer. Permanecendo com a aparência de 29 anos durante décadas, ela vive isolada e muda constantemente de identidade para esconder seu segredo. Sua vida muda quando conhece Ellis Jones, um homem por quem se apaixona, forçando-a a escolher entre continuar escondida ou finalmente viver o amor e enfrentar as consequências de sua condição.",
     },
 
+     ponyo: {
+        title: "Ponyo",
+        year: 2008,
+        director: "Hayao Miyazaki",
+        studio: "Studio Ghibli",
+        imdb: "7,6/10",
+        tomato: "83%",
+        trailer: "https://www.youtube.com/embed/h6XP82TyFWw?si=zlc44W6wkSKXYZf1" ,
+        poster: "../img/film-img/ponyo.jpg",
+        synopsis: "Ponyo é uma peixinha dourada mágica que vive no oceano com seu pai, um poderoso feiticeiro marinho. Após fugir de casa, ela conhece Sosuke, um menino de cinco anos que vive à beira-mar. Encantada pelo mundo humano e pela amizade com Sosuke, Ponyo deseja se tornar uma menina. No entanto, sua transformação desencadeia um desequilíbrio mágico que ameaça a natureza e o oceano.",
+    },
+
 };
