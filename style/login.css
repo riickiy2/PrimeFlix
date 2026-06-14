@@ -68,12 +68,12 @@ body {
   color: white;
   font-weight: 500;
 
-  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 
   transform: translateX(120%);
   opacity: 0;
 
-  transition: .35s ease;
+  transition: 0.35s ease;
 }
 
 /* toast visível */
@@ -399,9 +399,13 @@ select option {
 }
 
 /* ═══════════ RESPONSIVIDADE ═══════════ */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
+  .card {
+    width: 350px;
+  }
+
   .card-wide {
-    width: 100%;
+    width: 350px;
   }
 
   .row-2,
