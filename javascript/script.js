@@ -75,7 +75,10 @@ function avancarEtapa2() {
   const numero = document.getElementById("numero").value.trim();
 
   if (!rua) {
-    alert("Preencha o endereço! Use o botão Buscar para preencher pelo CEP.");
+    showToast(
+      "Preencha o endereço! Use o botão Buscar para preencher pelo CEP.",
+      "warning",
+    );
     return;
   }
   if (!numero) {
@@ -98,7 +101,7 @@ function cadastrar() {
   const confirmarSenha = document.getElementById("confirmarSenha").value;
 
   if (!user) {
-    alert("Informe um nome de usuario!");
+    showToast("Informe um nome de usuário", "warning");
     return;
   }
   if (pass.length < 8) {
@@ -114,7 +117,7 @@ function cadastrar() {
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     usuarios.push({ usuario: user, senha: pass });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    alert("Cadastro realizado com sucesso!");
+    showToast("Conta criada com sucesso!", "success");
     window.location = "home.html";
   }
 }
@@ -135,7 +138,7 @@ function fazerLogin() {
     localStorage.setItem("usuarioLogado", user);
     window.location = "home.html";
   } else {
-    alert("Usuário ou senha incorretos!");
+    showToast("Usuário ou senha incorretos!", "error");
   }
 }
 
@@ -187,7 +190,7 @@ async function buscarCep() {
   const cep = inputCep.value.replace(/\D/g, "");
 
   if (cep.length !== 8) {
-    alert("CEP inválido! Digite 8 números.");
+    showToast("CEP inválido! Digite 8 números.", "warning");
     limpa_formulario_cep();
     return;
   }
@@ -197,7 +200,7 @@ async function buscarCep() {
     const data = await res.json();
 
     if (data.erro) {
-      alert("CEP não encontrado!");
+      showToast("CEP não encontrado", "error");
     } else {
       document.getElementById("rua").value = data.logradouro;
       document.getElementById("bairro").value = data.bairro;
@@ -206,7 +209,7 @@ async function buscarCep() {
       document.getElementById("numero").focus();
     }
   } catch (e) {
-    alert("Erro ao buscar o CEP. Verifique sua conexão.");
+    showToast("Erro ao buscar CEP", "error");
   }
 }
 
@@ -228,4 +231,38 @@ function marcarErro(id, mensagem) {
   const erroKey = "erro" + id.charAt(0).toUpperCase() + id.slice(1);
   const erroEl = document.getElementById(erroKey);
   if (erroEl) erroEl.textContent = mensagem;
+}
+
+// ══════════════════════════════════════
+//  TOATS
+// ══════════════════════════════════════
+
+function showToast(message, type = "success") {
+  const container = document.getElementById("toastContainer");
+
+  // cria o toast
+  const toast = document.createElement("div");
+
+  // adiciona classes
+  toast.className = `toast ${type}`;
+
+  // texto
+  toast.textContent = message;
+
+  // coloca no HTML
+  container.appendChild(toast);
+
+  // pequena pausa para animação
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  // remover após 3 segundos
+  setTimeout(() => {
+    toast.classList.remove("show");
+
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }, 3000);
 }

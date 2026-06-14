@@ -44,6 +44,58 @@ body {
   display: block;
 }
 
+/* ═══════════ TOATS ═══════════ */
+
+#toastContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  z-index: 9999;
+}
+
+.toast {
+  min-width: 300px;
+  max-width: 400px;
+
+  padding: 16px 20px;
+  border-radius: 14px;
+
+  color: white;
+  font-weight: 500;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+
+  transform: translateX(120%);
+  opacity: 0;
+
+  transition: .35s ease;
+}
+
+/* toast visível */
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* tipos */
+
+.toast.success {
+  background: #1faa59;
+}
+
+.toast.error {
+  background: #d63031;
+}
+
+.toast.warning {
+  background: #e1a500;
+}
+
 /* ═══════════ CARD ═══════════ */
 .card {
   width: 420px;
