@@ -52,18 +52,39 @@ function avancarEtapa1() {
   const nome = document.getElementById("nome").value.trim();
   const nomeMae = document.getElementById("nomeMae").value.trim();
   const cpf = document.getElementById("cpf").value;
+  const celular = document.getElementById("celular").value;
 
   if (nome.length < 15 || nome.length > 60) {
     marcarErro("nome", "Nome deve ter entre 15 e 60 caracteres");
     erro = true;
+    showToast(
+      "Preencha o nome corretamente!.",
+      "warning",
+    );
   }
   if (nomeMae.length < 15 || nomeMae.length > 60) {
     marcarErro("nomeMae", "Nome deve ter entre 15 e 60 caracteres");
     erro = true;
+     showToast(
+      "Preencha o nome corretamente!.",
+      "warning",
+    );
   }
   if (cpf.length < 14) {
     marcarErro("cpf", "CPF inválido");
     erro = true;
+    showToast(
+      "CPF invalido. Digite um cpf valido!",
+      "warning",
+    );
+  }
+  if(celular.length < 15 || celular.length > 15 ){
+    marcarErro("celular", "Celular invalido");
+    erro = true;
+    showToast(
+      "Celualar invalido. Digite um numero de celular valido!",
+      "warning",
+    );
   }
 
   if (!erro) irParaEtapa(2);
