@@ -82,7 +82,7 @@ function avancarEtapa1() {
     marcarErro("celular", "Celular invalido");
     erro = true;
     showToast(
-      "Celualar invalido. Digite um numero de celular valido!",
+      "Celular invalido. Digite um numero de celular valido!",
       "warning",
     );
   }
