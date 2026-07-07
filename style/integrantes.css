@@ -44,13 +44,40 @@ body {
   display: block;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 70px;
+}
+
+.introduction {
+  text-align: center;
+}
+
+.introduction h1 {
+  color: var(--text-light);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.introduction p {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
 
-.container-card {
+.integrantes-card {
   display: grid;
   text-align: center;
   width: 250px;
@@ -60,9 +87,10 @@ body {
     transform 0.3s ease,
     background 0.3s ease,
     box-shadow 0.3s ease;
+  position: relative;
 }
 
-.container-card:hover {
+.integrantes-card:hover {
   border-color: #ee471d;
   backdrop-filter: blur(5px);
   transform: translateY(-6px);
@@ -70,12 +98,53 @@ body {
   box-shadow: 0 0 0 3px rgba(153, 132, 132, 0.18);
 }
 
-.card-img img {
+.integrantes-card img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  object-fit: cover; /* Esse código arruma a imagem de perfil */
 }
 
-.card-nome h2 {
-    color: var(--text-muted);
+.integrantes-card h2 {
+  color: var(--text-muted);
+}
+
+.social-menu {
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 200px;
+
+  background: #242424;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.25s;
+}
+
+.social-menu a {
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 16px;
+  transition: 0.2s;
+}
+
+.social-menu a:hover {
+  background: #353535;
+}
+
+.integrantes-card:hover .social-menu {
+  opacity: 1;
+  visibility: visible;
 }
