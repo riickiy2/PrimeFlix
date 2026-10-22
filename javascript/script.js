@@ -139,7 +139,7 @@ function cadastrar() {
     usuarios.push({ usuario: user, senha: pass });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     showToast("Conta criada com sucesso!", "success");
-    window.location = "home.html";
+    window.location = "/template/home.html";
   }
 }
 

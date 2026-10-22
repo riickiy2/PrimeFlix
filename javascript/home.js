@@ -53,5 +53,5 @@ if (track && nextBtn && prevBtn) {
 
 function logout() {
   localStorage.removeItem("usuarioLogado");
-  window.location = "index.html";
+  window.location = "/index.html";
 }
